@@ -82,7 +82,10 @@ class Subscribe extends CI_Controller {
 
         if($data['sell_status'] != -1) {
             // Get Ethereum Number
-            $data['eth_num'] = '10 ether';
+            $total_num = 11000000000000000000000;
+            $left_num = file_get_contents('http://127.0.0.1:8000/salestate');
+            $data['eth_num'] = ($total_num  - $left_num) / pow(10, 18) . ' ETH';
+            $data['show_width'] = ($total_num  - $left_num) / $total_num * 100 . '%';
         }
 
         $this->output->set_content_type('application/json')
