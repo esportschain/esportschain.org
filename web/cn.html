@@ -279,8 +279,18 @@
 				</div><!-- .col  -->
 				<div class="col-lg-5 offset-lg-1">
 					<div class="countdown-box text-center animated fadeInUp" data-animate="fadeInUp" data-delay=".3" style="visibility: visible; animation-delay: 0.3s;">
-						<div class="token-countdown d-flex align-content-stretch" data-date="2018/03/26"><div class="col"><span class="countdown-time">13</span><span class="countdown-text">天</span></div><div class="col"><span class="countdown-time">03</span><span class="countdown-text">时</span></div><div class="col"><span class="countdown-time">42</span><span class="countdown-text">分</span></div><div class="col"><span class="countdown-time countdown-time-last">53</span><span class="countdown-text">秒</span></div></div>
-						<a href="#" class="btn btn-alt btn-sm">不支持中国用户购买</a>
+						 <div id="sell_time" class="token-countdown d-flex align-content-stretch " data-date="2018/03/26 10:00"></div>
+						<!-- 融资进度s -->
+						<div id="sell_info" class="out-pro">
+								<span>售卖进度( <em id="sell_status">未开始</em> )</span>
+								<p class="pro"><i class="in-pro" ></i></p>
+								<div class="pro-price">
+									<span class="complate-price"><i></i>已融金额：<em id="sell_num">- ETH</em></span>
+									<span class="target-price"><i></i>目标金额：<em>11000 ETH</em></span>
+								</div>
+						</div>
+						<!-- 融资进度e -->
+						<a href="#" class="btn btn-alt btn-sm" id="go_buy">不支持中国用户购买</a>
 					</div>
 				</div><!-- .col  -->
 			</div><!-- .row  -->

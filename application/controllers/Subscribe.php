@@ -40,4 +40,72 @@ class Subscribe extends CI_Controller {
                 ->set_output(json_encode($data));
         }
 	}
+
+    /**
+     *  Index Page for this controller.
+     */
+    public function schedule() {
+        $data =  [
+            'result' => 0, 'message' => '.',
+            'start_status' => "Fail",
+            'sell_status' => 0, 'eth_num' => "- ETH",
+            'start_time' => "2018-03-26 10:00:00",
+            'end_time' => "2018-04-16 18:00:00",
+            'go_buy' => "buy.html",
+            'show_width' => "0%",
+        ];
+
+        $refer = '';
+        if (!empty($_SERVER['HTTP_REFERER'])) {
+             $refer = $_SERVER['HTTP_REFERER'];
+        }
+
+        $now_time = time();
+        $start_time = strtotime($data['start_time']);
+        $end_time = strtotime($data['end_time']);
+        $data['start_status'] = 'processing';
+        if($start_time > $now_time) {
+            $data['start_status'] = 'not started';
+            $data['sell_status'] = -1;
+        } elseif ($now_time > $end_time) {
+            $data['start_status'] = 'has ended';
+            $data['sell_status'] = 1;
+        }
+
+        if(stripos($refer, 'cn.html') !== FALSE){
+            $data['start_status'] = $this->en2cn($data['start_status']);
+            $data['go_buy'] = 'buy_cn.html';
+        } elseif (stripos($refer,'kr.html') !== FALSE) {
+            $data['start_status'] = $this->en2kr($data['start_status']);
+            $data['go_buy'] = 'buy_kr.html';
+        }
+
+        if($data['sell_status'] != -1) {
+            // Get Ethereum Number
+            $data['eth_num'] = '10 ether';
+        }
+
+        $this->output->set_content_type('application/json')
+            ->set_output(json_encode($data));
+    }
+
+    private function en2kr ($key) {
+        $lang = [
+            'not started' => "대기 중",
+            'processing' => "진행 중",
+            'has ended' => "종료 됨",
+        ];
+
+        return $lang[$key];
+    }
+
+    private function en2cn ($key) {
+        $lang = [
+            'not started' => "未开始",
+            'processing' => "进行中",
+            'has ended' => "已结束",
+        ];
+
+        return $lang[$key];
+    }
 }

@@ -15,7 +15,6 @@
 	$win.on('resize', function () { 
 		wwCurrent = winwidth(); 
 	});
-
 	// Sticky
 	var $is_sticky = $('.is-sticky');
 	if ($is_sticky.length > 0 ) {
@@ -98,15 +97,37 @@
 	// Count Down
 	var $count_token = $('.token-countdown');
 	if ($count_token.length > 0 ) {
-		$count_token.each(function() {
-			var $self = $(this), datetime = $self.attr("data-date");
-			$self.countdown(datetime).on('update.countdown', function(event) {
-				$(this).html(event.strftime('' + '<div class="col"><span class="countdown-time">%D</span><span class="countdown-text">Days</span></div>' + '<div class="col"><span class="countdown-time">%H</span><span class="countdown-text">Hours</span></div>' + '<div class="col"><span class="countdown-time">%M</span><span class="countdown-text">Minutes</span></div>' + '<div class="col"><span class="countdown-time countdown-time-last">%S</span><span class="countdown-text">Seconds</span></div>'));
-			});
-		});
-		
+        $.ajax({
+            url: 'index.php?c=subscribe&m=schedule',
+            type: 'get',
+            dataType: 'json',
+            success: function(data) {
+                if(data.result == 0) {
+                    if(data.sell_status == -1) {
+                        $count_token.each(function () {
+                            var $self = $(this), datetime = data.start_time;
+                            $self.countdown(datetime).on('update.countdown', function (event) {
+                                $(this).html(event.strftime('' + '<div class="col"><span class="countdown-time">%D</span><span class="countdown-text">Days</span></div>' + '<div class="col"><span class="countdown-time">%H</span><span class="countdown-text">Hours</span></div>' + '<div class="col"><span class="countdown-time">%M</span><span class="countdown-text">Minutes</span></div>' + '<div class="col"><span class="countdown-time countdown-time-last">%S</span><span class="countdown-text">Seconds</span></div>'));
+                            });
+                        });
+                    } else {
+                    	$('#sell_time').hide()
+                        $('#sell_info').show()
+                        $('#sell_status').html(data.start_status);
+                        $('#sell_num').html(data.eth_num);
+                        if(data.sell_status == 0) {
+                            $('#go_buy').attr('href', data.go_buy);
+                        }
+                        // 融资进度条
+                        $('.in-pro').css({'width': data.show_width});
+                        // 融资进度条
+					}
+                }
+            }
+        });
 	}
-	
+
+
 	//POPUP - Content
 	var $content_popup = $('.content-popup');
 	if ($content_popup.length > 0 ) {
@@ -216,7 +237,7 @@
 		});
 	}
 	
-	// On Scroll Animation
+	// On Scroll Animatio6
 	var $aniKey = $('.animated');
 	if($().waypoint && $aniKey.length > 0){
 		$win.on('load', function() {

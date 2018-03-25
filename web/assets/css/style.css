@@ -1298,3 +1298,146 @@ hr:last-child, .hr:last-child { margin-bottom: 0; }
   );
   filter: brightness(0.6)
 }
+/* 购买页面start */
+.buy .buy-block {
+  width: 80%;
+  background: #061a42;
+  border-radius: 30px;
+  padding:35px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.buy .buy-block p {
+  font-size: 15px;
+  color:#fff;
+  margin-bottom: 6px;
+}
+.buy .buy-block h4 {
+  margin-bottom: 10px;
+}
+.buy .buy-block h5 {
+  width: 100%;
+  word-wrap:break-word;word-break:break-all;
+}
+.buy .take-care {
+  font-size: 25px;
+  font-weight: 600;
+  color:#fff;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+.buy .whiteclick {
+  font-style: normal;
+  font-size: 28px;
+  color: #060525;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  width: 20%;
+  height: 70px;
+  margin: 0 auto;
+  background: #945313;
+  text-align: center;
+  line-height: 70px;
+  border-radius: 15px;
+  box-shadow: 3px 5px 8px 0 rgba(0,0,0,0.80);
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.buy .btn-toolbar .subbutton {
+  background: #945313;
+  box-shadow: 3px 5px 8px 0 rgba(0,0,0,0.80);
+  color: #060525;
+  width: 70px;
+  height: 35px;
+  border:0;
+  cursor: pointer;
+  border-radius: 6px;
+  font-family: PingFangSC-Medium;
+}
+.buy .form-control {
+  width: 90%;
+}
+.buy .form-control::placeholder {
+  color: #000000;
+}
+.buy .form-group .control-label span {
+  font-weight: 600;
+}
+.buy .buy-main {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 45px;
+}
+.buy .buy-main p {
+  font-size: 16px;
+  margin-bottom: 0;
+  font-family: PingFangSC-Medium;
+}
+.buy .buy-main .ques {
+  font-size: 18px;
+  margin-top: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .buy .whiteclick {
+     width: 60%;
+   }
+ }
+@media screen and (max-width: 768px) {
+ .buy .whiteclick {
+    width: 80%;
+  }
+}
+/* 购买页面end */
+/* 融资进度 */
+  .countdown-box .pro {
+    width: 80%;
+    height: 12px;
+    background: #1b1f4a;
+    position: relative;
+    border-radius: 6px;
+    margin: 0 auto;
+  }
+  .countdown-box .pro .in-pro{
+    height: 100%;
+    width: 0;
+    transition:all  1.5s .6s;
+    background: #135e80;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 6px;
+  }
+  /* .countdown-box .pro .in-proAni{
+    width: 80%;
+  } */
+  
+  .countdown-box .out-pro {
+    margin-bottom: 20px;
+  }
+  .countdown-box .out-pro span {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-family: PingFangSC-Medium;
+    margin-bottom: 15px;
+  }
+  .out-pro .pro-price {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+  .out-pro .pro-price span{
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .out-pro .pro-price em {
+    float: right;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+  }
+/* 融资进度 */

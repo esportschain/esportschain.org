@@ -97,7 +97,7 @@ switch (ENVIRONMENT)
  * This variable must contain the name of your "system" directory.
  * Set the path if it is not in the same directory as this file.
  */
-	$system_path = 'D:\devdoc\EST-v1.0\html-main\system';
+	$system_path = 'D:\work\esportschain.org\system';
 
 /*
  *---------------------------------------------------------------
@@ -114,7 +114,7 @@ switch (ENVIRONMENT)
  *
  * NO TRAILING SLASH!
  */
-	$application_folder = 'D:\devdoc\EST-v1.0\html-main\application';
+	$application_folder = 'D:\work\esportschain.org\application';
 
 /*
  *---------------------------------------------------------------
