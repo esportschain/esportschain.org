@@ -5,3 +5,5 @@
 .DS_Store
 */.idea/
 .idea/
+application/config/database.php
+web/index.php

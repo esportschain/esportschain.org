@@ -274,8 +274,28 @@
 			$preload.delay(700).fadeOut(300);
 		});
 	}
-	
-	// particlesJS
+
+    $(".btn-toolbar .subbutton").click(function(){
+        var reg = /[0x]{2}[0-9a-zA-Z]{40,}/
+        if($('#wallet').val() =='' || reg.test($('#wallet').val()) === false){
+            $('#msg_tips').html('please input wallet address...');
+            return false;
+		}
+
+        $('#msg_tips').html('checking...');
+        $.ajax({
+            url: 'index.php?c=whitelist&m=check&wallet=' + ($('#wallet').val()),
+            type: 'get',
+            dataType: 'json',
+            success: function(data) {
+                if(data.result == 0) {
+                    $('#msg_tips').html(data.message);
+                }
+            }
+        });
+    });
+
+        // particlesJS
 	var $particles_js = $('#particles-js');
 	if ($particles_js.length > 0 ) {
 		particlesJS('particles-js',
