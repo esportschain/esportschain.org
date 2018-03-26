@@ -284,7 +284,7 @@
 
         $('#msg_tips').html('checking...');
         $.ajax({
-            url: 'index.php?c=whitelist&m=check&wallet=' + ($('#wallet').val()),
+            url: 'index.php?c=WhiteList&m=check&wallet=' + ($('#wallet').val()),
             type: 'get',
             dataType: 'json',
             success: function(data) {
