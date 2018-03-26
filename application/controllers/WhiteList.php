@@ -49,8 +49,8 @@ class WhiteList extends CI_Controller {
             $this->load->library('upload');
             $config['upload_path'] = './uploads/';
             // 设置允许上传的类型
-            $config['allowed_types'] = 'gif|jpg|png|jpg';
-            $config['max_size'] = '1024';
+            $config['allowed_types'] = '*';
+            $config['max_size'] = '10240';
             // 如果是图片还可以设置最大高度和宽度
             $config['max_height'] = 1024;
             $config['max_width'] = 1024;
@@ -88,7 +88,7 @@ class WhiteList extends CI_Controller {
             $rows['country'] = $country;
             $rows['passport_front'] = $passport_front;
             $rows['passport_back'] = $passport_back;
-            $rows['is_check'] = 0;
+            $rows['is_check'] = 1;
             $rows['login_ip'] = $ip = $this->input->ip_address();
             $rows['submit_time'] = date("Y-m-d H:i:s", time());
 

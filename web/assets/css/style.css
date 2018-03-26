@@ -1360,9 +1360,10 @@ hr:last-child, .hr:last-child { margin-bottom: 0; }
 }
 .buy .form-control {
   width: 90%;
+  color:#000;
 }
 .buy .form-control::placeholder {
-  color: #000000;
+  color: #495057;
 }
 .buy .form-group .control-label span {
   font-weight: 600;
@@ -1393,8 +1394,14 @@ hr:last-child, .hr:last-child { margin-bottom: 0; }
 }
 /* 购买页面end */
 /* 融资进度 */
+.countdown-box .token-countdown {
+  padding-bottom: 0;
+}
+  .countdown-box {
+    padding:35px 15px;
+  }
   .countdown-box .pro {
-    width: 80%;
+    width: 90%;
     height: 12px;
     background: #1b1f4a;
     position: relative;
@@ -1411,9 +1418,6 @@ hr:last-child, .hr:last-child { margin-bottom: 0; }
     left: 0;
     border-radius: 6px;
   }
-  /* .countdown-box .pro .in-proAni{
-    width: 80%;
-  } */
   
   .countdown-box .out-pro {
     margin-bottom: 20px;
@@ -1426,7 +1430,7 @@ hr:last-child, .hr:last-child { margin-bottom: 0; }
     margin-bottom: 15px;
   }
   .out-pro .pro-price {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 15px;
   }
@@ -1439,5 +1443,20 @@ hr:last-child, .hr:last-child { margin-bottom: 0; }
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 300;
+  }
+  .out-pro .pro-price i {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
+  .out-pro .complate-price i{
+    background: #1b1f4a;
+  }
+  .out-pro .target-price i{
+    background: #135e80;
   }
 /* 融资进度 */

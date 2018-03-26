@@ -49,7 +49,7 @@ class Subscribe extends CI_Controller {
             'result' => 0, 'message' => '.',
             'start_status' => "Fail",
             'sell_status' => 0, 'eth_num' => "- ETH",
-            'start_time' => "2018-03-26 10:00:00",
+            'start_time' => "2018-03-26 09:00:00",
             'end_time' => "2018-04-16 18:00:00",
             'go_buy' => "buy.html",
             'show_width' => "0%",
@@ -84,7 +84,7 @@ class Subscribe extends CI_Controller {
             // Get Ethereum Number
             $total_num = 11000000000000000000000;
             $left_num = file_get_contents('http://127.0.0.1:8000/salestate');
-            $data['eth_num'] = ($total_num  - $left_num) / pow(10, 18) . ' ETH';
+            $data['eth_num'] = sprintf("%.2f",(($total_num  - $left_num) / pow(10, 18))) . ' ETH';
             $data['show_width'] = ($total_num  - $left_num) / $total_num * 100 . '%';
         }
 

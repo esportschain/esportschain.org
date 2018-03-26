@@ -12,13 +12,13 @@
 			<div class="row-group">
 				<div class="col-md-8">
 					<div>
-						<h2>Esports Token白名单</h2>
-						<p>请填写表单并提供准确的详细信息。否则购买将视为无效。</p>
+						<h2>Esports Token 화이트리스트</h2>
+						<p>양식을 작성하고 정확한 세부 정보를 제공하십시오. 그렇지 않으면 구매가 유효하지 않은 것으로 간주됩니다.</p>
 						<form method="POST" action="index.php?c=WhiteList" enctype="multipart/form-data">
 							<input type="hidden" name="csrf_test_name" value="" id="csrf_test_name">
 							<div class="form-group">
 								<label for="name" class="control-label">
-									<span>姓名</span>
+									<span>이름</span>
 								</label>
 								<div>
 									<input type="text" name="name" placeholder="Sunny" required="" id="name" class="form-control">
@@ -26,7 +26,7 @@
 							</div>
 							<div class="form-group">
 								<label for="email" class="control-label">
-									<span>电子邮件</span>
+									<span>이메일</span>
 								</label>
 								<div>
 									<input type="email" name="email" pattern="(?:[a-zA-Z0-9!#$%&amp;&#39;*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;&#39;*+\/=?^_`{|}~-]+)*|&quot;(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*&quot;)@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])" placeholder="sunny@example.com" required="" id="email" class="form-control">
@@ -34,38 +34,40 @@
 							</div>
 							<div class="form-group">
 								<label for="amount" class="control-label">
-									<span> 预期参与金额</span>
+									<span>참가 예상량</span>
 								</label>
 								<div>
 									<input type="number" name="amount" placeholder="10000" required="" id="amount" class="form-control">
-									<span class="help-block">这些信息是为了帮助我们估计总量，并且不会反映您在销售时的金额。如果您的预期参与金额&gt; 20 ETH，您可能需要提供居住证明。
+									<span class="help-block">이 정보는 총 금액을 예측하는 데 도움이되며 판매 금액을 반영하지 않습니다. 예상 참여 금액&gt; 20 ETH，거주 증명서를 제출해야 할 수도 있습니다.
 									</span>
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="wallet" class="control-label">
-									<span>ERC-20钱包地址</span>
+									<span>ERC-20월렛 주소</span>
 								</label>
 								<div>
-									<span class="help-block">确保这个地址是准确的，因为EST令牌将被发送到这个钱包。
+									<span class="help-block">EST 토큰이이 지갑으로 전송되므로이 주소가 정확한지 확인하십시오.
 									</span>
 									<input type="text" name="wallet" placeholder="0xbc9289d5cbe34127172e22d34189e1390ee24f4a" maxlength="42" minlength="42" required="" id="wallet" class="form-control">
-									<span class="help-block">42个字符。</span>
+									<span class="help-block">42 자.</span>
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="passport" class="control-label">
-									<span>政府颁发的身份证或护照</span>
+									<span>정부 발급 신분증 또는 여권</span>
 								</label>
 								<div>
-									<span class="help-block">如果您正在上传政府颁发的身份证，请上传正面和背面的图像。对于没有背部的ID，您只能上传前部。图像上的大小限制为10MB。请只上传清晰的图片（JPG或PNG）。</span>
+									<span class="help-block">정부 발급 신분증을 업로드하는 경우 전면 및 후면 이미지를 업로드하십시오. 뒷면이없는 ID의 경우 정면 만 업로드 할 수 있습니다. 이미지의 크기 제한은 10MB입니다. 선명한 사진 만 업로드하십시오.（JPG또는
+										PNG）。</span>
 									<span class="btn-file-group input-group">
-										<span class="input-group-addon">上传</span>
+										<span class="input-group-addon">업로드
+										</span>
 										<input type="file" accept="image/png, image/jpeg" name="passport_front" required="" id="passport1" class="">
 										<input type="text" value="" readonly="" id="passport1" class="form-control">
 									</span>
 									<span class="btn-file-group  input-group">
-										<span class="input-group-addon">上传</span>
+										<span class="input-group-addon">업로드</span>
 										<input type="file" accept="image/png, image/jpeg" name="passport_back" id="passport2" class="">
 										<input type="text" value="" readonly="" id="passport2" class="form-control">
 									</span>
@@ -73,7 +75,7 @@
 							</div>
 							<div class="form-group">
 								<label for="country" class="control-label">
-									<span>公民权国家</span>
+									<span>시민권</span>
 								</label>
 									<select name="country" required="" id="country" class="form-control">
 										<option value=""> - 국가 선택 -</option>
@@ -333,7 +335,7 @@
 									<div class="checkbox">
 										<label title="">
 											<input type="checkbox" name="termsAgreement" required="" value="on">
-												<span style="padding-left:20px;">我在此确认，本网站所包含的信息和/或其中的白皮书不构成我所做出的任何投资或购买决定的基础。我声明我对加密货币/区块链技术非常熟悉和胜任，在必要时寻求独立专业建议，并且充分意识到购买EST令牌所涉及的各种风险（可预见和不可预见），包括但不限于IT安全问题，市场波动和监管不确定性。我进一步接受并承认我的个人资料将被收集并确认我同意此处包含的<a>隐私政策</a>和<a>条款</a>。</span>
+												<span style="padding-left:20px;">본인은 본 사이트 및 / 또는 여기에 포함 된 백서에 포함 된 정보가 투자 또는 구매 결정의 기초가되지 않음을 확인합니다. 나는 cryptocurrency / blockchain 기술에 매우 익숙하고 능력이 있으며, 필요한 경우 독립적 인 전문가의 자문을 구하고, EST 토큰을 구입할 때 발생할 수있는 다양한 위험 (예측 가능하고 예견 할 수없는)을 충분히 알고 있음을 선언합니다. IT 보안 문제, 시장 변동 및 규제 불확실성 본인은 본인의 개인 정보가 수집되어 여기에 포함될 것에 동의 함을 더 받아들이고 인정합니다<a>개인 정보 보호 정책</a>그리고<a>이용 약관</a>。</span>
 										</label>
 									</div>
 							</div>
@@ -341,12 +343,12 @@
 									<div class="checkbox">
 										<label title="">
 											<input type="checkbox" name="countryAgreement" required="" value="on">
-											<span style="padding-left:20px;">我在此确认，我不是中国国籍，美国公民，美国居民或任何禁止出售EST代币的司法管辖区的居民。</span>
+											<span style="padding-left:20px;">본인은 본인이 중국인, 미국 시민, 미국 거주자 또는 EST 토큰의 판매를 금지하는 관할권의 거주자가 아님을 확인합</span>
 										</label>
 									</div>
 							</div>
 							<div class="bottom-box">
-								<button type="submit" class="btn btn-default">提交</button>
+								<button type="submit" class="btn btn-default">제출</button>
 							</div>
 						</form>
 					</div>
