@@ -40,14 +40,14 @@
 
 				<div class="collapse navbar-collapse justify-content-end" id="navbarToggle">
 					<ul class="navbar-nav animated" data-animate="fadeInDown" data-delay=".9">
-						<li class="nav-item"><a class="nav-link menu-link" href="cn.html#intro">EST简介<span class="sr-only">(current)</span></a></li>
-						<li class="nav-item"><a class="nav-link menu-link" href="cn.html#tokenSale">购买</a></li>
-						<li class="nav-item"><a class="nav-link menu-link" href="cn.html#roadmap">路线图</a></li>
-						<li class="nav-item"><a class="nav-link menu-link" href="cn.html#team">顾问</a></li>
-						<li class="nav-item"><a class="nav-link menu-link" href="cn.html#founding-team">创始团队</a></li>
-						<li class="nav-item"><a class="nav-link menu-link" href="cn.html#partners">投资及合作</a></li>
+						<li class="nav-item"><a class="nav-link menu-link" href="#intro">About<span class="sr-only">(current)</span></a></li>
+						<li class="nav-item"><a class="nav-link menu-link" href="#tokenSale">Token Sale</a></li>
+						<li class="nav-item"><a class="nav-link menu-link" href="#roadmap">Roadmap</a></li>
+						<li class="nav-item"><a class="nav-link menu-link" href="#team">Advisors</a></li>
+						<li class="nav-item"><a class="nav-link menu-link" href="#founding-team">Founding team</a></li>
+						<li class="nav-item"><a class="nav-link menu-link" href="#partners">Partners</a></li>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">语言</a>
+							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Language</a>
 							<div class="dropdown-menu">
 								<a class="dropdown-item menu-link" href="index.html">English</a>
 								<a class="dropdown-item menu-link" href="kr.html">한국어</a>
@@ -56,8 +56,8 @@
 						</li>
 					</ul>
 					<ul class="navbar-nav navbar-btns animated" data-animate="fadeInDown" data-delay="1.15">
-						<li class="nav-item"><a class="nav-link btn btn-sm btn-outline menu-link" href="assets/pdf/Esports Chain 白皮书.pdf" target="_blank">白皮书</a></li>
-						<li class="nav-item"><a class="nav-link btn btn-sm btn-outline menu-link" href="cn.html#tokenSale">购买</a></li>
+						<li class="nav-item"><a class="nav-link btn btn-sm btn-outline menu-link" href="assets/pdf/Esports Chain White Paper.pdf" target="_blank">Whitepaper</a></li>
+						<li class="nav-item"><a class="nav-link btn btn-sm btn-outline menu-link" href="#tokenSale">BUY TOKEN NOW</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -73,26 +73,27 @@
 			<div class="row align-items-center">
 				<div class="col-md-12">
 					<div class="buy-block">
-						<h4 class="animated" data-animate="fadeInUp" data-delay="0">官方唯一合约地址，请将ETH打到这个地址上： </h4>
+						<h4 class="animated" data-animate="fadeInUp" data-delay="0">The only official contract address, please send ETH to this address: </h4>
 						<h5 class="animated" data-animate="fadeInUp" data-delay="0">0x80631171a5FECdA196e2E148f01ddEcE782eCfCf</h5>
 					</div>
 				</div>
 			</div>
-			<p class="take-care">您需要先加入白名单，然后才能购买 EST！</p>
-			<a href="submit.html" class="whiteclick" data-animate="fadeInUp" target="_blank" data-delay="0">加入白名单</a>
+			<p class="take-care">You need to join the whitelist before you purchase EST!</p>
+			<a href="submit.html" class="whiteclick" data-animate="fadeInUp" target="_blank" data-delay="0">Join the whitelist
+			</a>
 			<div class="row align-items-center">
 					<div class="col-md-12">
 						<div class="buy-block buy-input">
-							<h4 class="animated" data-animate="fadeInUp" data-delay="0">已经加入白名单，检查白名单状态.</h4>
+							<h4 class="animated" data-animate="fadeInUp" data-delay="0">Whitelist has been added, check the status of the whitelist.</h4>
 							<form method="POST" name="check" class="">
 								<div class="form-group">
 									<label for="wallet" class="control-label">
-										<p class="animated" data-animate="fadeInUp" data-delay=".1">请在输入框输入ETH钱包地址（ERC-20）</p>
+										<p class="animated" data-animate="fadeInUp" data-delay=".1">Please enter the ETH wallet address (ERC-20) in the input box</p>
 									</label>
 									<div class="">
 										<input type="text" name="wallet" placeholder="0xbc9289d5cbe34127172e22d34189e1390ee24f4a" maxlength="42" minlength="42" required="" id="wallet" class="form-control">
 										  <span class="help-block">
-											<span>42 个字符长度.</span>
+											<span>42 characters in length</span>
 											<span id="msg_tips" style="color: #761c19"></span>
 										  </span>
 									</div>
@@ -108,39 +109,46 @@
 					</div>
 			</div>
 			<div class="buy-main">
-				<h4>重要提示：</h4>
+				<h4>Important notifications:：</h4>
                 <ul>
-					<li>1、EST公开销售将于2018-3-26 10:00:00（GMT+8）开始, 2018-4-16 18:00:00（GMT+8）结束</li>
-					<li>2、只有在开始时间和结束的时间内进行的交易才会被接受，以外时间的交易将被拒绝</li>
-					<li>3、只有列入白名单的地址才能参与 EST 销售（请先确认您的白名单状态）</li>
-					<li>4、EST 销售将通过智能合约进行，转ETH到官方地址后，官方会自动打回对应的EST</li>
-					<li>5、最低购买金额为1 ETH, 最高购买金额为11000 ETH</li>
-					<li>6、可以在上述范围内发送任意数量的ETH</li>
-					<li>7、智能合约只接受以太坊, ETH兑换EST的比例是1:11000</li>
-					<li>8、官方的唯一地址是：0x80631171a5FECdA196e2E148f01ddEcE782eCfCf</li>
-					<li>9、您必须将ETH打到EST官方唯一的合约地址上，否则您将丢失您的ETH</li>
-					<li>10、请不要从交易所的地址转ETH到官方地址，否则您将无法收到EST</li>
-					<li>11、所有采购都是最终的，不支持退币
+					<li>1.The EST public sale starts at 2018-3-26 10:00:00 (GMT+8) and ends at 2018-4-16 18:00:00 (GMT+8).</li>
+					<li>2、Only transactions made during the start time and the end time will be accepted, otherwise transactions will be rejected.</li>
+					<li>3.Only whitelisted addresses can participate in EST sales (please check the status of the whitelist)</li>
+					<li>4. EST sales will be made through smart contracts. After transferring ETH to the official address, you will get corresponding EST automatically.</li>
+					<li>5. The minimum purchase amount is 1 ETH, the maximum purchase amount is 11000 ETH.</li>
+					<li>6. Within the above range, you can send any amount of ETH.</li>
+					<li>7. Smart contracts only accept Ethereum, and the ratio of ETH to EST is 1:11,000.</li>
+					<li>8. The only official address: 0x80631171a5FECdA196e2E148f01ddEcE782eCfCf</li>
+					<li>9. You must send ETH to the EST official contract address, otherwise you will lose your ETH.</li>
+					<li>10. Please do not send ETH to official address from the exchange address, otherwise you will not receive EST.</li>
+                    <li>11. All purchases are final and do not support refund. </li>
                 </ul>
 			</div>
 			<div class="row align-items-center">
 				<div class="col-md-12">
 					<div class="buy-block">
-						<h4 class="animated" data-animate="fadeInUp" data-delay="0">官方唯一合约地址，请将ETH打到这个地址上：</h4>
+						<h4 class="animated" data-animate="fadeInUp" data-delay="0">The only official contract address, please send ETH to this address:
+						</h4>
 						<h5 class="animated" data-animate="fadeInUp" data-delay="0">0x80631171a5FECdA196e2E148f01ddEcE782eCfCf</h5>
 					</div>
 				</div>
 			</div>
 			<div class="buy-main">
-					<h4>智能合约购买说明：</h4>
-					<p>这是将用于EST令牌销售的唯一智能合约地址！请在发送ETH之前仔细检查，确保地址相同。</p>
+					<h4>Smart contract purchase instructions:
+					</h4>
+					<p>This is the only smart contract address that will be used for EST token sales! Please check carefully before sending ETH to ensure the address is the right one.
+					</p>
 			</div>
 			<div class="buy-main">
-					<h4>购买说明：</h4>
-					<p>1、将以太坊发送至上述智能合约地址, 我们建议您至少使用210,000 gas limit。</p>
-					<p>2、您将自动从智能合约接收EST。</p>
-					<p>3、要让EST显示在您的钱包中, 请使用IMtoken钱包查看</p>
-					<p class="ques">如果您对销售有任何疑问，请查看我们的<a href="https://t.me/esportschain">Telegram</a>和<a href="https://twitter.com/esports_chain">Twitter</a>。</p>
+					<h4>Purchase instructions:
+					</h4>
+					<p>1. Send Ethereum to the above smart contract address, we recommend using at least 210,000 gas limit.
+					</p>
+					<p>2. You will receive EST automatically from the smart contract.
+					</p>
+					<p>3. In order to have EST displayed in your wallet, please use the IMtoken wallet to check.
+					</p>
+					<p class="ques">If you have any questions about sales, please check out our <a href="https://t.me/esportschain">Telegram</a>and<a href="https://twitter.com/esports_chain">Twitter</a>.</p>
 
 			</div>
 
@@ -152,8 +160,8 @@
             <div class="row text-center">
                 <div class="col-md-12">
                     <span class="copyright-text animated" data-animate="fadeInUp" data-delay=".3">
-                    Copyright &copy; 2018， ESPORTS CHAIN。
-                    <span>所有的商标和版权归 esportschain.org 所有。</span>
+                    Copyright &copy; 2018, ESPORTS CHAIN.
+					<span>All trademarks and copyrights belong to their respective owners.</span>
                 </span>
 					<ul class="social">
 						<li class="animated" data-animate="fadeInUp" data-delay="1.9"><a href="https://twitter.com/esports_chain" target="blank"><em class="fa fa-twitter"></em></a></li>
