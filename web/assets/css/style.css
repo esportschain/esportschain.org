@@ -1453,10 +1453,10 @@ hr:last-child, .hr:last-child { margin-bottom: 0; }
     vertical-align: middle;
     margin-bottom: 5px;
   }
-  .out-pro .complate-price i{
+  .out-pro .target-price i{
     background: #1b1f4a;
   }
-  .out-pro .target-price i{
+  .out-pro .complate-price i{
     background: #135e80;
   }
 /* 融资进度 */
