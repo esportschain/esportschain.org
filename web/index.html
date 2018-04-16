@@ -15,7 +15,6 @@
 	<link rel="stylesheet" href="assets/css/style.css?ver=1.0">
 	<link rel="stylesheet" href="assets/css/theme.css?ver=1.0">
 </head>
-
 <body class="theme-dark is-smooth-effect" data-spy="scroll" data-target="#mainnav" data-offset="80">
 
 	<!-- Header -->
@@ -110,11 +109,14 @@
 					<div class="text-block">
 						<h4 class="animated block-heading" data-animate="fadeInUp" data-delay="0">What We Do?</h4>
 						<p class="animated" data-animate="fadeInUp" data-delay=".2">This project aims at applying blockchain technology to establishing the value network, promoting the value exchange efficiency and redefining the the interest distribution rules in game and Esports ecosystem.</p>
-						<!--<a href="https://www.youtube.com/" class="play-btn video-play animated" data-animate="fadeInUp" data-delay=".2">-->
-							<!--<em class="play"><span></span></em>-->
-							<!--<span>Watch Video</span>-->
-							<!--<span>What and How it work</span>-->
-						<!--</a>-->
+						<!-- <a class="play-btn video-play animated" data-animate="fadeInUp" data-delay=".2"> -->
+							<!--< a href=" "class="play-btn video-play animated" data-animate="fadeInUp" data-delay=".2">-->
+							<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/lHOoVtr5o0c?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+							<a class="play-btn video animated" data-animate="fadeInUp" data-delay=".2" href="https://www.youtube.com/embed/lHOoVtr5o0c?rel=0&amp;controls=0&amp;showinfo=0">
+							<em class="play"><span></span></em>
+							<span>Watch Video</span>
+							<span>What and How it work</span>
+						</a>
 					</div>
 				</div><!-- .col  -->
 			</div><!-- .row  -->
@@ -696,7 +698,30 @@
 
 	<!-- JavaScript (include all script here) -->
 	<script src="assets/js/jquery.bundle.js"></script>
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
 	<script src="assets/js/script.js"></script>
+	<script type="text/javascript">
+	// 视频地址转换
+	$('.video').magnificPopup({
+	  type: 'iframe',
+	   iframe: {
+		markup: '<div class="mfp-iframe-scaler">' +
+			'<div class="mfp-close"></div>' +
+			'<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+			'</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
 
+		patterns: {
+			youtube: {
+        	src: 'https://www.youtube.com/embed/lHOoVtr5o0c?rel=0&amp;controls=0&amp;showinfo=0' // URL that will be set as a source for iframe.
+      },
+	},
+
+		srcAction: 'iframe_src',
+	}
+
+  
+});
+	
+</script>
 </body>
 </html>

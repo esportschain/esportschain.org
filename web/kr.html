@@ -108,13 +108,13 @@
 				</div><!-- .col  -->
 				<div class="col-md-6 offset-md-1">
 					<div class="text-block">
-						<h4 class="animated block-heading" data-animate="fadeInUp" data-delay="0">무엇을 하나요?</h4>
+						<h4 class="animated block-heading" data-animate="fadeInUp" data-delay="0">동영상 보기?</h4>
 						<p class="animated" data-animate="fadeInUp" data-delay=".2">본 프로젝트는 블록체인 기술을 결합하여 가치 네트워크를 구축하고 가치 교환 효율을 높이며 게임 및 E스포츠 생태계에서의 이익 배분 규칙을 재정의하는 것을 목표로 합니다.</p>
-						<!--<a href="https://www.youtube.com/" class="play-btn video-play animated" data-animate="fadeInUp" data-delay=".2">-->
-							<!--<em class="play"><span></span></em>-->
-							<!--<span>Watch Video</span>-->
-							<!--<span>What and How it work</span>-->
-						<!--</a>-->
+						<a href="https://www.youtube.com/embed/Lve7cqZ_F-U?rel=0&amp;controls=0&amp;showinfo=0" class="play-btn video animated" data-animate="fadeInUp" data-delay=".2">
+							<em class="play"><span></span></em>
+							<span>비디오를보다</span>
+							<span>무엇이 어떻게 작동 하는가?</span>
+						</a>
 					</div>
 				</div><!-- .col  -->
 			</div><!-- .row  -->
@@ -696,7 +696,31 @@
 
 	<!-- JavaScript (include all script here) -->
 	<script src="assets/js/jquery.bundle.js"></script>
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
 	<script src="assets/js/script.js"></script>
+	<script type="text/javascript">
+		// 视频地址转换
+		$('.video').magnificPopup({
+		  type: 'iframe',
+		   iframe: {
+			markup: '<div class="mfp-iframe-scaler">' +
+				'<div class="mfp-close"></div>' +
+				'<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+				'</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
+	
+			patterns: {
+				youtube: {
+				src: 'https://www.youtube.com/embed/Lve7cqZ_F-U?rel=0&amp;controls=0&amp;showinfo=0' // URL that will be set as a source for iframe.
+		  },
+		},
+	
+			srcAction: 'iframe_src',
+		}
+	
+	  
+	});
+		
+	</script>
 
 </body>
 </html>
