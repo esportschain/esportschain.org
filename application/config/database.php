@@ -75,10 +75,13 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '',
-	'username' => 'est_esports_chain',
-	'password' => 'est@super#NB',
-	'database' => 'est_esports_chain',
+	'hostname' => 'mysql',
+//	'username' => 'est_esports_chain',
+	'username' => 'root',
+//	'password' => 'est@super#NB',
+	'password' => 'root',
+//	'database' => 'est_esports_chain',
+	'database' => 'esportchain',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

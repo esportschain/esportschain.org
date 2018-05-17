@@ -8,7 +8,7 @@ class Subscribe extends CI_Controller {
      */
 	public function index()
 	{
-	    if($this->input->method() == 'post') {
+        if($this->input->method() == 'post') {
             $data =  [
                 'result' => "Fail",
                 'message' => 'Email address error or repeated submission.'
@@ -26,16 +26,16 @@ class Subscribe extends CI_Controller {
 
                 $rst = $this->db->from('est_user_subscribe')->where('email', $your_email)->get()->result();
                 if(empty($rst)) {
-                   $flag = $this->db->insert('est_user_subscribe', $rows);
-                   if(!empty($flag)) {
-                       $data['result'] = 'success ';
-                       $data['message'] = '<strong>Thank you</strong> for Subscribing our update.';
-                   }
+                    $flag = $this->db->insert('est_user_subscribe', $rows);
+                    if(!empty($flag)) {
+                        $data['result'] = 'success ';
+                        $data['message'] = '<strong>Thank you</strong> for Subscribing our update.';
+                    }
                 }
 
             } else {
                 $data['message'] = 'Email address error.';
-             }
+            }
             $this->output->set_content_type('application/json')
                 ->set_output(json_encode($data));
         }
@@ -111,4 +111,6 @@ class Subscribe extends CI_Controller {
 
         return $lang[$key];
     }
+
+
 }

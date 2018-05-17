@@ -126,8 +126,61 @@
             }
         });
 	}
+	// News
+	var $newsul = $('#news_tip');
+	if ($newsul.length > 0 ) {
+    $.ajax({
+      url: '/api/getnews',
+      type: 'get',
+      dataType: 'json',
+      success: function(data) {
+					var newsul = $('#news_tip');
+					var newsurl = window.location.href.toString();
+					var news_cn = newsurl.indexOf('cn')>-1;
+					// var news_index = newsurl.indexOf('index')>-1;
+					var news_kr = newsurl.indexOf('kr')>-1;
+						if(news_cn ){
+							var newshtml=data.map(addr => `
+								<li class="news-list">
+									<div class="news-title">
+										<i></i>
+										<a href=${addr.url}  target="_blank">${addr.cn_title}</a>
+									</div>
+									<span>${addr.publish_time}</span>
+								</li>`).join('');
+							newsul.html(newshtml);
 
+						}else if(news_kr) {
+							var newshtml=data.map(addr => `
+								<li class="news-list">
+									<div class="news-title">
+										<i></i>
+										<a href=${addr.url} target="_blank">${addr.kr_title}</a>
+									</div>
+									<span>${addr.publish_time}</span>
+								</li>`).join('');
+							newsul.html(newshtml);
 
+							}else{
+								var newshtml=data.map(addr => `
+									<li class="news-list">
+										<div class="news-title">
+											<i></i>
+											<a href=${addr.url} target="_blank">${addr.en_title}</a>
+										</div>
+										<span>${addr.publish_time}</span>
+									</li>`).join('');
+								newsul.html(newshtml)
+							}
+				}
+		});
+	}else {
+		$('#news').hide();
+	}
+	// 移动端页面跳转
+	$(".new-mb").click(function(){
+		$(".new-mb-list").show();
+	});
 	//POPUP - Content
 	var $content_popup = $('.content-popup');
 	if ($content_popup.length > 0 ) {
