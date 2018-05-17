@@ -4,10 +4,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Admin extends CI_Controller    {
 
     /**
+     *  检测是否登陆
+     */
+    public function __islogin()
+    {
+        $this->load->library('session');
+        if($this->session->is_login){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    /**
      * 后台首页
      */
     public function index()
     {
+        if(!$this->__islogin()){
+            $this->load->helper('url');
+            redirect('c=admin&m=login','location');
+        }
         $this->load->view('admin/index');
     }
 
@@ -51,6 +67,10 @@ class Admin extends CI_Controller    {
      */
     public function news()
     {
+        if(!$this->__islogin()){
+            $this->load->helper('url');
+            redirect('c=admin&m=login','location');
+        }
         date_default_timezone_set('GMT');
         $data['list'] = [];
         $this->load->database();
@@ -62,6 +82,7 @@ class Admin extends CI_Controller    {
         }
         $data['list'] = $rst;
         $this->load->view('admin/news',$data);
+
     }
 
     /**
@@ -69,6 +90,10 @@ class Admin extends CI_Controller    {
      */
     public function editnews()
     {
+        if(!$this->__islogin()){
+            $this->load->helper('url');
+            redirect('c=admin&m=login','location');
+        }
         date_default_timezone_set('PRC');
         $this->load->database();
         if($this->input->method() == 'post') {
@@ -98,6 +123,10 @@ class Admin extends CI_Controller    {
      */
     public function addnews()
     {
+        if(!$this->__islogin()){
+            $this->load->helper('url');
+            redirect('c=admin&m=login','location');
+        }
         date_default_timezone_set('PRC');
         if($this->input->method() == 'post') {
             $post = $this->input->post();
