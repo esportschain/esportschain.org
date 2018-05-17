@@ -285,7 +285,7 @@
                 <!-- END RESPONSIVE QUICK SEARCH FORM -->
             </li>
             <li class=" start">
-                <a href="/admin/index">
+                <a href="/index.php?c=admin&m=index">
                     <i class="icon-home"></i>
                     <span class="title">首页</span>
                 </a>
@@ -297,7 +297,7 @@
                     <span class="arrow "></span>
                 </a>
                 <ul class="sub">
-                    <li ><a href="/admin/news">新闻列表</a></li>
+                    <li ><a href="/index.php?c=admin&m=news">新闻列表</a></li>
                 </ul>
             </li>
         </ul>
@@ -349,11 +349,11 @@
                     <ul class="breadcrumb">
                         <li>
                             <i class="icon-home"></i>
-                            <a href="/admin/index">首页</a>
+                            <a href="/index.php?c=admin&m=index">首页</a>
                             <i class="icon-angle-right"></i>
                         </li>
                         <li>
-                            <a href="/admin/news">新闻列表</a>
+                            <a href="/index.php?c=admin&m=news">新闻列表</a>
                         </li>
 
                     </ul>
@@ -369,7 +369,7 @@
                         <div class="portlet-title">
                             <h4><i class="icon-bell"></i>新闻列表</h4>
                             <div class="tools">
-                                <a href="/admin/addnews" class="">添加新闻</a>
+                                <a href="index.php?c=admin&m=addnews" class="">添加新闻</a>
                             </div>
                         </div>
                         <div class="portlet-body">
@@ -400,7 +400,7 @@
                                     <td><?php echo $v['sort']?></td>
                                     <td><?php if($v['is_del']){echo '已删除';}else{echo '未删除';} ?></td>
                                     <td><?php echo $v['publish_time'];?></td>
-                                    <td><a href="/admin/editnews?newsid=<?php echo $v['id'];?>" class="btn mini purple"> Edit</a></td>
+                                    <td><a href="index.php?c=admin&m=editnews&newsid=<?php echo $v['id'];?>" class="btn mini purple"> Edit</a></td>
                                 </tr>
                                 <?php endforeach;?>
                                 </tbody>

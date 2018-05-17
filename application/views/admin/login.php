@@ -30,7 +30,8 @@
 <!-- BEGIN LOGIN -->
 <div class="content">
     <!-- BEGIN LOGIN FORM -->
-    <form class="form-vertical login-form" action="/admin/checkLogin" method="post">
+    <form class="form-vertical login-form" action="index.php?c=admin&m=checkLogin" method="post">
+        <input type="hidden" name="<?php echo $csrf_name;?>" value="<?php echo $csrf_hash;?>" />
         <h3 class="form-title">Login to your account</h3>
         <div class="alert alert-error hide">
             <button class="close" data-dismiss="alert"></button>

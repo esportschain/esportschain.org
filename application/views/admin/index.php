@@ -285,7 +285,7 @@
                 <!-- END RESPONSIVE QUICK SEARCH FORM -->
             </li>
             <li class="active start">
-                <a href="/admin/index">
+                <a href="/index.php?c=admin&m=index">
                     <i class="icon-home"></i>
                     <span class="title">首页</span>
                 </a>
@@ -297,7 +297,7 @@
                     <span class="arrow "></span>
                 </a>
                 <ul class="sub">
-                    <li ><a href="/admin/news">新闻列表</a></li>
+                    <li ><a href="/index.php?c=admin&m=news">新闻列表</a></li>
                 </ul>
             </li>
         </ul>

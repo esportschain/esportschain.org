@@ -19,9 +19,13 @@ class Admin extends CI_Controller    {
         $this->load->library('session');
         if($this->session->is_login){
             $this->load->helper('url');
-            redirect('/admin/index','location');
+            redirect('c=admin&m=index','location');
         }else{
-            $this->load->view('admin/login');
+            $csrf = array(
+                'csrf_name' => $this->security->get_csrf_token_name(),
+                'csrf_hash' => $this->security->get_csrf_hash()
+            );
+            $this->load->view('admin/login',$csrf);
         }
     }
 
@@ -36,9 +40,9 @@ class Admin extends CI_Controller    {
         if($post['username'] == $name && $post['password'] == $pass){
             $this->load->library('session');
             $this->session->set_userdata('is_login', true);
-            echo '<script>alert("登陆成功！");window.location.href="/admin/index";</script>';
+            echo '<script>alert("登陆成功！");window.location.href="/index.php?c=admin&m=index";</script>';
         }else{
-            echo '<script>alert("登陆失败！");window.location.href="/admin/login";</script>';
+            echo '<script>alert("登陆失败！");window.location.href="/index.php?c=admin&m=login";</script>';
         }
     }
 
@@ -73,8 +77,8 @@ class Admin extends CI_Controller    {
             $post['add_time'] = strtotime($post['add_time']);
             $this->db->replace('est_news', $post);
             $this->load->helper('url');
-            echo '<script>alert("修改成功！");window.location.href="/admin/news";</script>';
-//            redirect('/admin/news','location');
+            echo '<script>alert("修改成功！");window.location.href="/index.php?c=admin&m=news";</script>';
+//            redirect('/index.php?c=admin&m=news','location');
         }else{
             $newsid = $this->input->get('newsid');
             $this->db->from('est_news');
@@ -83,6 +87,8 @@ class Admin extends CI_Controller    {
             // 处理发布时间为此格式 ：Tue,15 May 2018 10:05:23 GMT
             $rst['publish_time'] = date('Y-m-d H:i:s',$rst['publish_time']);
             $rst['add_time'] = date('Y-m-d H:i:s',$rst['add_time']);
+            $rst['csrf_name'] = $this->security->get_csrf_token_name();
+            $rst['csrf_hash'] = $this->security->get_csrf_hash();
             $this->load->view('admin/newsdetail',$rst);
         }
 
@@ -100,10 +106,14 @@ class Admin extends CI_Controller    {
             $this->load->database();
             $this->db->insert('est_news', $post);
             $this->load->helper('url');
-            echo '<script>alert("添加成功！");window.location.href="/admin/news";</script>';
-//            redirect('/admin/news','location');
+            echo '<script>alert("添加成功！");window.location.href="/index.php?c=admin&m=news";</script>';
+//            redirect('/index.php?c=admin&m=news','location');
         }else{
-            $this->load->view('admin/addnews');
+            $csrf = array(
+                'csrf_name' => $this->security->get_csrf_token_name(),
+                'csrf_hash' => $this->security->get_csrf_hash()
+            );
+            $this->load->view('admin/addnews',$csrf);
         }
 
     }

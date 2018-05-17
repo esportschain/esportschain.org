@@ -290,7 +290,7 @@
                 <!-- END RESPONSIVE QUICK SEARCH FORM -->
             </li>
             <li class="start">
-                <a href="/admin/index">
+                <a href="/index.php?c=admin&m=index">
                     <i class="icon-home"></i>
                     <span class="title">首页</span>
                 </a>
@@ -302,7 +302,7 @@
                     <span class="arrow "></span>
                 </a>
                 <ul class=" sub">
-                    <li ><a href="/admin/news">新闻列表</a></li>
+                    <li ><a href="/index.php?c=admin&m=news">新闻列表</a></li>
                 </ul>
             </li>
         </ul>
@@ -386,7 +386,8 @@
                                 <div class="tab-content">
                                     <div class="tab-pane active" id="portlet_tab1">
                                         <!-- BEGIN FORM-->
-                                        <form action="/admin/addnews" class="form-horizontal" method="post">
+                                        <form action="index.php?c=admin&m=addnews" class="form-horizontal" method="post">
+                                            <input type="hidden" name="<?php echo $csrf_name;?>" value="<?php echo $csrf_hash;?>" />
                                             <div class="control-group">
                                                 <label class="control-label">中文标题</label>
                                                 <div class="controls">
