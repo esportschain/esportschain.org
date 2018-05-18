@@ -380,7 +380,9 @@
                                     <th>中文标题</th>
                                     <th>英文标题</th>
                                     <th>韩文标题</th>
-                                    <th>url</th>
+                                    <th>中文新闻链接</th>
+                                    <th>英文新闻链接</th>
+                                    <th>韩文新闻链接</th>
                                     <th>排序字段</th>
                                     <th>是否删除</th>
                                     <th>发布时间</th>
@@ -396,7 +398,9 @@
                                     <td><?php echo $v['cn_title'];?></td>
                                     <td><?php echo $v['en_title'];?></td>
                                     <td><?php echo $v['kr_title'];?></td>
-                                    <td><?php echo $v['url']?></td>
+                                    <td><?php echo $v['cn_url']?></td>
+                                    <td><?php echo $v['en_url']?></td>
+                                    <td><?php echo $v['kr_url']?></td>
                                     <td><?php echo $v['sort']?></td>
                                     <td><?php if($v['is_del']){echo '已删除';}else{echo '未删除';} ?></td>
                                     <td><?php echo $v['publish_time'];?></td>

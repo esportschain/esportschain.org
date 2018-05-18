@@ -417,9 +417,23 @@
                                                 </div>
                                             </div>
                                             <div class="control-group">
-                                                <label class="control-label">链接</label>
+                                                <label class="control-label">中文新闻链接</label>
                                                 <div class="controls">
-                                                    <input type="text" name='url' placeholder="large" class="m-wrap large" value="<?php echo $url;?>"/>
+                                                    <input type="text" name='cn_url' placeholder="large" class="m-wrap large" value="<?php echo $cn_url;?>"/>
+                                                    <span class="help-inline"></span>
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">英文新闻链接</label>
+                                                <div class="controls">
+                                                    <input type="text" name='en_url' placeholder="large" class="m-wrap large" value="<?php echo $en_url;?>"/>
+                                                    <span class="help-inline"></span>
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">韩文新闻链接</label>
+                                                <div class="controls">
+                                                    <input type="text" name='kr_url' placeholder="large" class="m-wrap large" value="<?php echo $kr_url;?>"/>
                                                     <span class="help-inline"></span>
                                                 </div>
                                             </div>
