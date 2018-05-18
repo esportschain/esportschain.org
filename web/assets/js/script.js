@@ -130,7 +130,7 @@
 	var $newsul = $('#news_tip');
 	if ($newsul.length > 0 ) {
     $.ajax({
-      url: 'index.php?c=api&m=getnews',
+      url: '/api/getnews',
       type: 'get',
       dataType: 'json',
       success: function(data) {
@@ -144,7 +144,7 @@
 								<li class="news-list">
 									<div class="news-title">
 										<i></i>
-										<a href=${addr.cn_url}  target="_blank">${addr.cn_title}</a>
+										<a href=${addr.url}  target="_blank">${addr.cn_title}</a>
 									</div>
 									<span>${addr.publish_time}</span>
 								</li>`).join('');
@@ -155,7 +155,7 @@
 								<li class="news-list">
 									<div class="news-title">
 										<i></i>
-										<a href=${addr.kr_url} target="_blank">${addr.kr_title}</a>
+										<a href=${addr.url} target="_blank">${addr.kr_title}</a>
 									</div>
 									<span>${addr.publish_time}</span>
 								</li>`).join('');
@@ -166,7 +166,7 @@
 									<li class="news-list">
 										<div class="news-title">
 											<i></i>
-											<a href=${addr.en_url} target="_blank">${addr.en_title}</a>
+											<a href=${addr.url} target="_blank">${addr.en_title}</a>
 										</div>
 										<span>${addr.publish_time}</span>
 									</li>`).join('');

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="translated-ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="assets/css/submit.css" rel="stylesheet">
+<title>Esports</title>
+</head>
+<body>
+	<div id="app">
+		<div class="container">
+			<div class="row-group">
+				<div class="col-md-8">
+					<div>
+						<h2>Esports Token Whitelist</h2>
+						<p>Please fill out the form and provide accurate details. Otherwise, the purchase will be considered invalid.</p>
+						<form method="POST" action="index.php?c=WhiteList" enctype="multipart/form-data">
+							<input type="hidden" name="csrf_test_name" value="" id="csrf_test_name">
+							<div class="form-group">
+								<label for="name" class="control-label">
+									<span>Name</span>
+								</label>
+								<div>
+									<input type="text" name="name" placeholder="Sunny" required="" id="name" class="form-control">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="email" class="control-label">
+									<span>Email</span>
+								</label>
+								<div>
+									<input type="email" name="email" pattern="(?:[a-zA-Z0-9!#$%&amp;&#39;*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;&#39;*+\/=?^_`{|}~-]+)*|&quot;(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*&quot;)@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])" placeholder="sunny@example.com" required="" id="email" class="form-control">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="amount" class="control-label">
+									<span>Expected amount you may participate</span>
+								</label>
+								<div>
+									<input type="number" name="amount" placeholder="10000" required="" id="amount" class="form-control">
+									<span class="help-block">This information is to help us estimate the total amount and it does not reflect your actual purchase amount. If your expected amount is > 20 ETH, you may need to provide proof of residence. </span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="wallet" class="control-label">
+									<span>ERC-20 Wallet Address</span>
+								</label>
+								<div>
+									<span class="help-block">Make sure this address is accurate because the EST token will be sent to this wallet.</span>
+									<input type="text" name="wallet" placeholder="0xbc9289d5cbe34127172e22d34189e1390ee24f4a" maxlength="42" minlength="42" required="" id="wallet" class="form-control">
+									<span class="help-block">42 Characters</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="passport" class="control-label">
+									<span>Government-issued ID or passport</span>
+								</label>
+								<div>
+									<span class="help-block">If you are uploading a government-issued ID card, please upload both the front and back side images. For IDs without a back side, please upload the front side. The size limit on the image is 5MB. Please upload clear images (JPG or PNG).</span>
+									<span class="btn-file-group input-group">
+										<span class="input-group-addon">Upload</span>
+										<input type="file" accept="image/png, image/jpeg" name="passport_front" required="" id="passport1" class="">
+										<input type="text" value="" readonly="" id="passport1" class="form-control">
+									</span>
+									<span class="btn-file-group  input-group">
+										<span class="input-group-addon">Upload</span>
+										<input type="file" accept="image/png, image/jpeg" name="passport_back" id="passport2" class="">
+										<input type="text" value="" readonly="" id="passport2" class="form-control">
+									</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="country" class="control-label">
+									<span>Country of Citizenship</span>
+								</label>
+									<select name="country" required="" id="country" class="form-control">
+										<option value=""> - Select a country -</option>
+										<option value="AD">AD: Andorra</option>
+										<option value="AE">AE: Arlenide</option>
+										<option value="AF">AF: Afghanistan</option>
+										<option value="AG">AG: Antigua and Barbuda</option>
+										<option value="AI">AI: British Anguilla</option>
+										<option value="AL">AL: Albania</option>
+										<option value="AM">AM: Armenia</option>
+										<option value="AO">AO: Angola</option>
+										<option value="AQ">AQ: Antarctica</option>
+										<option value="AR">AR: Argentina</option>
+										<option value="AS">AS: American Samoa</option>
+										<option value="AT">AT: Austria</option>
+										<option value="AU">AU: Australia</option>
+										<option value="AW">AW: Aruba</option>
+										<option value="AX">AX: Aland Islands</option>
+										<option value="AZ">AZ: Azerbaijan</option>
+										<option value="BA">BA:Boh</option>
+										<option value="BB">BB: Barbados</option>
+										<option value="BD">BD: Bangladesh</option>
+										<option value="BE">BE: Belgium</option>
+										<option value="BF">BF: Burkina Faso</option>
+										<option value="BG">BG: Bulgaria</option>
+										<option value="BH">BH: Bahrain</option>
+										<option value="BI">BI: Burundi</option>
+										<option value="BJ">BJ: Benin</option>
+										<option value="BL">BL: St. Barthelemy</option>
+										<option value="BM">BM: Bermuda</option>
+										<option value="BN">BN: Brunei </option>
+										<option value="BO">BO: Bolivia</option>
+										<option value="BQ">BQ: Dutch Caribbean Region</option>
+										<option value="BR">BR: Brazil</option>
+										<option value="BS">BS: Bahamas</option>
+										<option value="BT">BT: Bhutan</option>
+										<option value="BV">BV: Budweiser Island</option>
+										<option value="BW">BW: Botswana</option>
+										<option value="BY">BY: Belarus</option>
+										<option value="BZ">BZ: Belize</option>
+										<option value="CA">CA:Canada</option>
+										<option value="CC">CC: Cocos Islands</option>
+										<option value="CD">CD: Democratic Republic of Congo</option>
+										<option value="CF">CF: Central Africa</option>
+										<option value="CG">CG: Congo</option>
+										<option value="CH">CH: Switzerland</option>
+										<option value="CI">CI: Ivory Coast</option>
+										<option value="CK">CK: Cook Islands</option>
+										<option value="CL">CL: Chile</option>
+										<option value="CM">CM: Cameroon</option>
+										<option value="CO">CO: Colombia</option>
+										<option value="CR">CR: Costa Rica</option>
+										<option value="CU">CU: Cuba</option>
+										<option value="CV">CV: Cape Verde</option>
+										<option value="CW">CW: Curaçao</option>
+										<option value="CX">CX: Christmas Island</option>
+										<option value="CY">CY: Cyprus</option>
+										<option value="CZ">CZ: Czech</option>
+										<option value="DE">DE: Germany</option>
+										<option value="DJ">DJ: Djibouti</option>
+										<option value="DK">DK: Denmark</option>
+										<option value="DM">DM: Dominica</option>
+										<option value="DO">DO: Dominican </option>
+										<option value="DZ">DZ:Algeria</option>
+										<option value="EC">EC: Ecuador</option>
+										<option value="EE">EE:Estonia</option>
+										<option value="EG">EG: Egypt</option>
+										<option value="EH">EH: Western Sahara</option>
+										<option value="ER">ER: Eritrea</option>
+										<option value="ES">ES: Spain</option>
+										<option value="ET">ET: Ethiopian</option>
+										<option value="FI">FI: Finland</option>
+										<option value="FJ">FJ: Fiji</option>
+										<option value="FK">FK: Falkland Islands</option>
+										<option value="FM">FM: Federated States of Micronesia</option>
+										<option value="FO">FO: Faroe Islands</option>
+										<option value="FR">FR: France</option>
+										<option value="GA">GA: Gabon</option>
+										<option value="GB">GB: UK</option>
+										<option value="GD">GD: Grenada</option>
+										<option value="GE">GE: Georgia</option>
+										<option value="GF">GF: French Guiana</option>
+										<option value="GG">GG: Guernsey</option>
+										<option value="GH">GH: Ghana</option>
+										<option value="GI">GI: Gibraltar</option>
+										<option value="GL">GL: Greenland</option>
+										<option value="GM">GM: The Gambia</option>
+										<option value="GN">GN: Guinea</option>
+										<option value="GP">GP: Guadeloupe </option>
+										<option value="GQ">GQ: Equatorial Guinea</option>
+										<option value="GR">GR: Greece</option>
+										<option value="GS">GS: South Georgia and South Sandwich Islands</option>
+										<option value="GT">GT: Guatemala</option>
+										<option value="GU">GU: Guam</option>
+										<option value="GW">GW: Guinea-Bissau </option>
+										<option value="GY">GY: Guyana</option>
+										<option value="HK">HK: Hong Kong, China</option>
+										<option value="HM">HM: Hurd and McDonald Islands</option>
+										<option value="HN">HN: Honduras</option>
+										<option value="HR">HR: Croatia</option>
+										<option value="HT">HT: Haiti</option>
+										<option value="HU">HU: Hungary</option>
+										<option value="ID">ID: Indonesia</option>
+										<option value="IE">IE: Ireland</option>
+										<option value="IL">IL: Israel</option>
+										<option value="IM">IM: Isle of Man</option>
+										<option value="IN">IN:India</option>
+										<option value="IO">IO: British Indian Ocean Region</option>
+										<option value="IQ">IQ: Iraq</option>
+										<option value="IR">IR: Iran</option>
+										<option value="IS">IS: Iceland</option>
+										<option value="IT">IT:Italy</option>
+										<option value="JE">JE: Jersey</option>
+										<option value="JM">JM: Jamaica</option>
+										<option value="JO">JO: Jordan</option>
+										<option value="JP">JP: Japan</option>
+										<option value="KE">KE:Kenya</option>
+										<option value="KG">KG: Kyrgyzstan</option>
+										<option value="KH">KH: Cambodia</option>
+										<option value="KI">KI: Kiribati</option>
+										<option value="KM">KM: Comoros</option>
+										<option value="KN">KN: Saint Kitts and Nevis</option>
+										<option value="KP">KP: North Korea</option>
+										<option value="KR">KR: South Korea</option>
+										<option value="KW">KW: Kuwait</option>
+										<option value="KY">KY: Cayman Islands</option>
+										<option value="KZ">KZ: Kazakh</option>
+										<option value="LA">LA: Laos </option>
+										<option value="LB">LB: Lebanon</option>
+										<option value="LC">LC: Saint Lucia</option>
+										<option value="LI">LI: Liechtenstein</option>
+										<option value="LK">LK: Sri Lanka</option>
+										<option value="LR">LR: Liberia</option>
+										<option value="LS">LS: Lesotho</option>
+										<option value="LT">LT: Lithuania</option>
+										<option value="LU">LU: Luxembourg</option>
+										<option value="LV">LV: Latvia</option>
+										<option value="LY">LY: Libya</option>
+										<option value="MA">MA: Morocco</option>
+										<option value="MC">MC: Monaco</option>
+										<option value="MD">MD: Moldova</option>
+										<option value="ME">ME:Montenegro</option>
+										<option value="MF">MF: French Saint Martin </option>
+										<option value="MG">MG: Madagascar</option>
+										<option value="MH">MH: Marshall Islands</option>
+										<option value="MK">MK: Macedonia</option>
+										<option value="ML">ML: Marley</option>
+										<option value="MM">MM: Myanmar</option>
+										<option value="MN">MN: Mongolia</option>
+										<option value="MO">MO: Macau, China</option>
+										<option value="MP">MP: Northern Mariana Islands</option>
+										<option value="MQ">MQ: French Martinique</option>
+										<option value="MR">MR: Mauritania</option>
+										<option value="MS">MS: Monserrate </option>
+										<option value="MT">MT: Malta</option>
+										<option value="MU">MU: Mauritius</option>
+										<option value="MV">MV: Maldives</option>
+										<option value="MW">MW: Malawi</option>
+										<option value="MX">MX: Mexico</option>
+										<option value="MY">MY: Malaysia</option>
+										<option value="MZ">MZ: Mozambique</option>
+										<option value="NA">NA:Namibia</option>
+										<option value="NC">NC: New Caledonia</option>
+										<option value="NE">NE: Niri</option>
+										<option value="NF">NF: Norfolk Island</option>
+										<option value="NG">NG: Nigeria</option>
+										<option value="NI">NI: Nicaragua</option>
+										<option value="NK">NK: Nagorny Karabakh</option>
+										<option value="NL">NL: Netherlands</option>
+										<option value="NO">NO: Norway</option>
+										<option value="NP">NP: Nepal</option>
+										<option value="NR">NR: Nuo Lu</option>
+										<option value="NU">NU: Niue</option>
+										<option value="NZ">NZ: New Zealand</option>
+										<option value="OM">OM: Oman</option>
+										<option value="PA">PA: Panama</option>
+										<option value="PE">PE: Peru</option>
+										<option value="PF">PF: French Polynesia</option>
+										<option value="PG">PG: Papua New Guinea</option>
+										<option value="PH">PH: Philippines</option>
+										<option value="PK">PK: Pakistan</option>
+										<option value="PL">PL: Poland</option>
+										<option value="PM">PM: Saint-Pierre and Miquelon Islands</option>
+										<option value="PN">PN: Pitcairn Island</option>
+										<option value="PR">PR: Puerto Rico</option>
+										<option value="PS">PS: Palestine</option>
+										<option value="PT">PT: Portugal</option>
+										<option value="PW">PW: Palau</option>
+										<option value="PY">PY: Paraguay</option>
+										<option value="QA">QA: Qatar</option>
+										<option value="RE">RE: Reunion</option>
+										<option value="RO">RO: Romania</option>
+										<option value="RS">RS: Serbia</option>
+										<option value="RU">RU: Russia</option>
+										<option value="RW">RW: Rwanda</option>
+										<option value="SA">SA: Saudi Arabia</option>
+										<option value="SB">SB: Solomon Islands</option>
+										<option value="SC">SC: Seychelles</option>
+										<option value="SD">SD: Sudan</option>
+										<option value="SE">SE:Sweden</option>
+										<option value="SG">SG:Singapore</option>
+										<option value="SH">SH: St. Helena </option>
+										<option value="SI">SI: Slovenia</option>
+										<option value="SJ">SJ: Svalbard and Spire Island</option>
+										<option value="SK">SK: Slovakia</option>
+										<option value="SL">SL: Lion Mountain</option>
+										<option value="SM">SM: San Marino</option>
+										<option value="SN">SN: Senegal</option>
+										<option value="SO">SO: Somalia</option>
+										<option value="SR">SR: Suriname</option>
+										<option value="SS">SS: South Sudan </option>
+										<option value="ST">ST: Sao Tome Principe</option>
+										<option value="SV">SV: El Salvador</option>
+										<option value="SX">SX: Sint Maarten </option>
+										<option value="SY">SY: Syria</option>
+										<option value="SZ">SZ: Swaziland</option>
+										<option value="TC">TC: Turks and Caicos Islands</option>
+										<option value="TD">TD: Chad</option>
+										<option value="TF">TF: French Southern Dependent</option>
+										<option value="TG">TG: Togo</option>
+										<option value="TH">TH: Thailand</option>
+										<option value="TJ">TJ: Tajik</option>
+										<option value="TK">TK: Tokelau Islands</option>
+										<option value="TL">TL: East Timor</option>
+										<option value="TM">TM: Turkmen</option>
+										<option value="TN">TN: Tunisia</option>
+										<option value="TO">TO: East Canada</option>
+										<option value="TR">TR:Turkey</option>
+										<option value="TT">TT: Trinidad and Tobago</option>
+										<option value="TV">TV: Tuvalu</option>
+										<option value="TW">TW: Taiwan, China</option>
+										<option value="TZ">TZ: Tanzania</option>
+										<option value="UA">UA: Ukraine</option>
+										<option value="UG">UG: Uganda</option>
+										<option value="UM">UM: U.S. Frontier Islands</option>
+										<option value="UY">UY: Uruguay</option>
+										<option value="UZ">UZ: Uzbek</option>
+										<option value="VA">VA: Vatican City</option>
+										<option value="VC">VC: Saint Vincent and the Grenadines</option>
+										<option value="VE">VE: Venezuela</option>
+										<option value="VG">VG: British Virgin Islands</option>
+										<option value="VI">VI: US Virgin Islands</option>
+										<option value="VN">VN: Vietnam</option>
+										<option value="VU">VU: Vanuatu</option>
+										<option value="WF">WF: Voorhis and Volta Island</option>
+										<option value="WS">WS: Samoa</option>
+										<option value="YE">YE: Yemen</option>
+										<option value="YT">YT:Miyate</option>
+										<option value="ZA">ZA: South Africa</option>
+										<option value="ZM">ZM: Zambia</option>
+										<option value="EU">EU: EU</option>
+									</select>
+
+							</div>
+							<div class="form-group">
+									<div class="checkbox">
+										<label title="">
+											<input type="checkbox" name="termsAgreement" required="" value="on">
+												<span style="padding-left:20px;">I hereby confirm that the information contained in this website and/or the white papers contained therein do not form the basis of any investment or purchase decision I make. I declare that I am very familiar with and competent in cryptocurrency/blockchain technology. I will seek independent professional advice when necessary, and I am fully aware of the various risks (foreseeable and unforeseen) involved in the purchase of EST tokens, including but not limited to IT security issues, market fluctuations and regulatory uncertainty. I further accept and acknowledge that my personal data will be collected and confirm that I agree to the privacy policy and terms contained herein.</span>
+										</label>
+									</div>
+							</div>
+							<div class="form-group">
+									<div class="checkbox">
+										<label title="">
+											<input type="checkbox" name="countryAgreement" required="" value="on">
+											<span style="padding-left:20px;">I hereby confirm that I am not a Chinese national, a U.S. citizen, a U.S. resident, or a resident of any jurisdiction that prohibits the sale of EST tokens.</span>
+										</label>
+									</div>
+							</div>
+							<div class="bottom-box">
+								<button type="submit" class="btn btn-default">submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="assets/js/jquery-1.12.2.js"></script>
+	<script>
+		$('input:file').change(function(){
+			$(this).siblings($('input:text')).val($(this).val())
+		});
+        function getCookie(name){
+            var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+            if(arr != null) return unescape(arr[2]); return null;
+        }
+        $('#csrf_test_name').val(getCookie('csrf_cookie_name'));
+	</script>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class="translated-ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="assets/css/submit.css" rel="stylesheet">
+<title>Esports</title>
+</head>
+<body>
+	<div id="app">
+		<div class="container">
+			<div class="row-group">
+				<div class="col-md-8">
+					<div>
+						<h2>Esports Token白名单</h2>
+						<p>请填写表单并提供准确的详细信息。否则购买将视为无效。</p>
+						<form method="POST" action="index.php?c=WhiteList" enctype="multipart/form-data">
+							<input type="hidden" name="csrf_test_name" value="" id="csrf_test_name">
+							<div class="form-group">
+								<label for="name" class="control-label">
+									<span>姓名</span>
+								</label>
+								<div>
+									<input type="text" name="name" placeholder="Sunny" required="" id="name" class="form-control">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="email" class="control-label">
+									<span>电子邮件</span>
+								</label>
+								<div>
+									<input type="email" name="email" pattern="(?:[a-zA-Z0-9!#$%&amp;&#39;*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;&#39;*+\/=?^_`{|}~-]+)*|&quot;(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*&quot;)@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])" placeholder="sunny@example.com" required="" id="email" class="form-control">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="amount" class="control-label">
+									<span> 预期参与金额</span>
+								</label>
+								<div>
+									<input type="number" name="amount" placeholder="10000" required="" id="amount" class="form-control">
+									<span class="help-block">这些信息是为了帮助我们估计总量，并且不会反映您在销售时的金额。如果您的预期参与金额&gt; 20 ETH，您可能需要提供居住证明。
+									</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="wallet" class="control-label">
+									<span>ERC-20钱包地址</span>
+								</label>
+								<div>
+									<span class="help-block">确保这个地址是准确的，因为EST令牌将被发送到这个钱包。
+									</span>
+									<input type="text" name="wallet" placeholder="0xbc9289d5cbe34127172e22d34189e1390ee24f4a" maxlength="42" minlength="42" required="" id="wallet" class="form-control">
+									<span class="help-block">42个字符。</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="passport" class="control-label">
+									<span>政府颁发的身份证或护照</span>
+								</label>
+								<div>
+									<span class="help-block">如果您正在上传政府颁发的身份证，请上传正面和背面的图像。对于没有背部的ID，您只能上传前部。图像上的大小限制为10MB。请只上传清晰的图片（JPG或PNG）。</span>
+									<span class="btn-file-group input-group">
+										<span class="input-group-addon">上传</span>
+										<input type="file" accept="image/png, image/jpeg" name="passport_front" required="" id="passport1" class="">
+										<input type="text" value="" readonly="" id="passport1" class="form-control">
+									</span>
+									<span class="btn-file-group  input-group">
+										<span class="input-group-addon">上传</span>
+										<input type="file" accept="image/png, image/jpeg" name="passport_back" id="passport2" class="">
+										<input type="text" value="" readonly="" id="passport2" class="form-control">
+									</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="country" class="control-label">
+									<span>公民权国家</span>
+								</label>
+									<select name="country" required="" id="country" class="form-control">
+										<option value=""> - 选择一个国家 -</option>
+										<option value="AD">AD:安道尔</option>
+										<option value="AE">AE:阿联</option>
+										<option value="AF">AF:阿富汗</option>
+										<option value="AG">AG:安提瓜和巴布达</option>
+										<option value="AI">AI:英属安圭拉</option>
+										<option value="AL">AL:阿尔巴尼亚</option>
+										<option value="AM">AM:亚美尼亚</option>
+										<option value="AO">AO:安哥拉</option>
+										<option value="AQ">AQ:南极洲</option>
+										<option value="AR">AR:阿根廷</option>
+										<option value="AS">AS:美属萨摩亚</option>
+										<option value="AT">AT:奥地利</option>
+										<option value="AU">AU:澳洲</option>
+										<option value="AW">AW:阿鲁巴</option>
+										<option value="AX">AX:奥兰群岛</option>
+										<option value="AZ">AZ:亚塞拜然</option>
+										<option value="BA">BA:波赫</option>
+										<option value="BB">BB:巴贝多</option>
+										<option value="BD">BD:孟加拉</option>
+										<option value="BE">BE:比利时</option>
+										<option value="BF">BF:布基纳法索</option>
+										<option value="BG">BG:保加利亚</option>
+										<option value="BH">BH:巴林</option>
+										<option value="BI">BI:蒲隆地</option>
+										<option value="BJ">BJ:贝南</option>
+										<option value="BL">BL:圣巴瑟米</option>
+										<option value="BM">BM:百慕达</option>
+										<option value="BN">BN:汶莱</option>
+										<option value="BO">BO:玻利维亚</option>
+										<option value="BQ">BQ:荷兰加勒比区</option>
+										<option value="BR">BR:巴西</option>
+										<option value="BS">BS:巴哈马</option>
+										<option value="BT">BT:不丹</option>
+										<option value="BV">BV:布威岛</option>
+										<option value="BW">BW:波札那</option>
+										<option value="BY">BY:白俄罗斯</option>
+										<option value="BZ">BZ:伯利兹</option>
+										<option value="CA">CA:加拿大</option>
+										<option value="CC">CC:可可斯群岛</option>
+										<option value="CD">CD:民主刚果</option>
+										<option value="CF">CF:中非</option>
+										<option value="CG">CG:刚果</option>
+										<option value="CH">CH:瑞士</option>
+										<option value="CI">CI:象牙海岸</option>
+										<option value="CK">CK:库克群岛</option>
+										<option value="CL">CL:智利</option>
+										<option value="CM">CM:喀麦隆</option>
+										<option value="CO">CO:哥伦比亚</option>
+										<option value="CR">CR:哥斯大黎加</option>
+										<option value="CU">CU:古巴</option>
+										<option value="CV">CV:维德角</option>
+										<option value="CW">CW:库拉索</option>
+										<option value="CX">CX:圣诞岛</option>
+										<option value="CY">CY:塞普勒斯</option>
+										<option value="CZ">CZ:捷克</option>
+										<option value="DE">DE:德国</option>
+										<option value="DJ">DJ:吉布地</option>
+										<option value="DK">DK:丹麦</option>
+										<option value="DM">DM:多米尼克</option>
+										<option value="DO">DO:多明尼加</option>
+										<option value="DZ">DZ:阿尔及利亚</option>
+										<option value="EC">EC:厄瓜多</option>
+										<option value="EE">EE:爱沙尼亚</option>
+										<option value="EG">EG:埃及</option>
+										<option value="EH">EH:西撒哈拉</option>
+										<option value="ER">ER:厄立垂亚</option>
+										<option value="ES">ES:西班牙</option>
+										<option value="ET">ET:衣索比亚</option>
+										<option value="FI">FI:芬兰</option>
+										<option value="FJ">FJ:斐济</option>
+										<option value="FK">FK:福克兰群岛</option>
+										<option value="FM">FM:密克罗尼西亚联邦</option>
+										<option value="FO">FO:法罗群岛</option>
+										<option value="FR">FR:法国</option>
+										<option value="GA">GA:加蓬</option>
+										<option value="GB">GB:英国</option>
+										<option value="GD">GD:格林纳达</option>
+										<option value="GE">GE:乔治亚</option>
+										<option value="GF">GF:法属圭亚那</option>
+										<option value="GG">GG:格恩西</option>
+										<option value="GH">GH:加纳</option>
+										<option value="GI">GI:直布罗陀</option>
+										<option value="GL">GL:格陵兰</option>
+										<option value="GM">GM:冈比亚</option>
+										<option value="GN">GN:几内亚</option>
+										<option value="GP">GP:瓜德鲁普岛</option>
+										<option value="GQ">GQ:赤道几内亚</option>
+										<option value="GR">GR:希腊</option>
+										<option value="GS">GS:南乔治亚与南三明治群岛</option>
+										<option value="GT">GT:危地马拉</option>
+										<option value="GU">GU:关岛</option>
+										<option value="GW">GW:几内亚比绍</option>
+										<option value="GY">GY:圭亚那</option>
+										<option value="HK">HK:中国香港</option>
+										<option value="HM">HM:赫德及麦当劳群岛</option>
+										<option value="HN">HN:洪都拉斯</option>
+										<option value="HR">HR:克罗地亚</option>
+										<option value="HT">HT:海地</option>
+										<option value="HU">HU:匈牙利</option>
+										<option value="ID">ID:印尼</option>
+										<option value="IE">IE:爱尔兰</option>
+										<option value="IL">IL:以色列</option>
+										<option value="IM">IM:曼岛</option>
+										<option value="IN">IN:印度</option>
+										<option value="IO">IO:英属印度洋地区</option>
+										<option value="IQ">IQ:伊拉克</option>
+										<option value="IR">IR:伊朗</option>
+										<option value="IS">IS:冰岛</option>
+										<option value="IT">IT:意大利</option>
+										<option value="JE">JE:泽西岛</option>
+										<option value="JM">JM:牙买加</option>
+										<option value="JO">JO:约旦</option>
+										<option value="JP">JP:日本</option>
+										<option value="KE">KE:肯亚</option>
+										<option value="KG">KG:吉尔吉斯</option>
+										<option value="KH">KH:柬埔寨</option>
+										<option value="KI">KI:基里巴斯</option>
+										<option value="KM">KM:科摩罗</option>
+										<option value="KN">KN:圣基茨和尼维斯</option>
+										<option value="KP">KP:朝鲜</option>
+										<option value="KR">KR:韩国</option>
+										<option value="KW">KW:科威特</option>
+										<option value="KY">KY:开曼群岛</option>
+										<option value="KZ">KZ:哈萨克</option>
+										<option value="LA">LA:寮国</option>
+										<option value="LB">LB:黎巴嫩</option>
+										<option value="LC">LC:圣卢西亚</option>
+										<option value="LI">LI:列支敦士登</option>
+										<option value="LK">LK:斯里兰卡</option>
+										<option value="LR">LR:利比里亚</option>
+										<option value="LS">LS:莱索托</option>
+										<option value="LT">LT:立陶宛</option>
+										<option value="LU">LU:卢森堡</option>
+										<option value="LV">LV:拉脱维亚</option>
+										<option value="LY">LY:利比亚</option>
+										<option value="MA">MA:摩洛哥</option>
+										<option value="MC">MC:摩纳哥</option>
+										<option value="MD">MD:摩尔多瓦</option>
+										<option value="ME">ME:蒙特内哥罗</option>
+										<option value="MF">MF:法属圣马丁　</option>
+										<option value="MG">MG:马达加斯加</option>
+										<option value="MH">MH:马绍尔群岛</option>
+										<option value="MK">MK:马其顿</option>
+										<option value="ML">ML:马利</option>
+										<option value="MM">MM:缅甸</option>
+										<option value="MN">MN:蒙古</option>
+										<option value="MO">MO:中国澳门</option>
+										<option value="MP">MP:北马里亚纳群岛</option>
+										<option value="MQ">MQ:法属马丁尼克</option>
+										<option value="MR">MR:毛里塔尼亚</option>
+										<option value="MS">MS:蒙塞拉特岛</option>
+										<option value="MT">MT:马耳他</option>
+										<option value="MU">MU:毛里求斯</option>
+										<option value="MV">MV:马尔代夫</option>
+										<option value="MW">MW:马拉维</option>
+										<option value="MX">MX:墨西哥</option>
+										<option value="MY">MY:马来西亚</option>
+										<option value="MZ">MZ:莫桑比克</option>
+										<option value="NA">NA:奈米比亚</option>
+										<option value="NC">NC:新喀里多尼亚岛</option>
+										<option value="NE">NE:尼日</option>
+										<option value="NF">NF:诺福克岛</option>
+										<option value="NG">NG:尼日利亚</option>
+										<option value="NI">NI:尼加拉瓜</option>
+										<option value="NK">NK:纳戈尔诺-卡拉巴赫</option>
+										<option value="NL">NL:荷兰</option>
+										<option value="NO">NO:挪威</option>
+										<option value="NP">NP:尼泊尔</option>
+										<option value="NR">NR:诺鲁</option>
+										<option value="NU">NU:纽埃</option>
+										<option value="NZ">NZ:纽西兰</option>
+										<option value="OM">OM:阿曼</option>
+										<option value="PA">PA:巴拿马</option>
+										<option value="PE">PE:秘鲁</option>
+										<option value="PF">PF:法属波利尼西亚</option>
+										<option value="PG">PG:巴布亚新几内亚</option>
+										<option value="PH">PH:菲律宾</option>
+										<option value="PK">PK:巴基斯坦</option>
+										<option value="PL">PL:波兰</option>
+										<option value="PM">PM:圣皮耶与密克隆群岛</option>
+										<option value="PN">PN:皮特康岛</option>
+										<option value="PR">PR:波多黎各</option>
+										<option value="PS">PS:巴勒斯坦</option>
+										<option value="PT">PT:葡萄牙</option>
+										<option value="PW">PW:帕劳</option>
+										<option value="PY">PY:巴拉圭</option>
+										<option value="QA">QA:卡达</option>
+										<option value="RE">RE:留尼旺</option>
+										<option value="RO">RO:罗马尼亚</option>
+										<option value="RS">RS:塞尔维亚</option>
+										<option value="RU">RU:俄罗斯</option>
+										<option value="RW">RW:卢旺达</option>
+										<option value="SA">SA:沙特阿拉伯</option>
+										<option value="SB">SB:所罗门群岛</option>
+										<option value="SC">SC:塞舌尔</option>
+										<option value="SD">SD:苏丹</option>
+										<option value="SE">SE:瑞典</option>
+										<option value="SG">SG:新加坡</option>
+										<option value="SH">SH:圣赫勒拿</option>
+										<option value="SI">SI:斯洛文尼亚</option>
+										<option value="SJ">SJ:斯瓦巴及尖棉岛</option>
+										<option value="SK">SK:斯洛伐克</option>
+										<option value="SL">SL:狮子山</option>
+										<option value="SM">SM:圣马力诺</option>
+										<option value="SN">SN:塞内加尔</option>
+										<option value="SO">SO:索马里</option>
+										<option value="SR">SR:苏里南</option>
+										<option value="SS">SS:南苏丹</option>
+										<option value="ST">ST:圣多美普林西比</option>
+										<option value="SV">SV:萨尔瓦多</option>
+										<option value="SX">SX:荷属圣马丁</option>
+										<option value="SY">SY:叙利亚</option>
+										<option value="SZ">SZ:斯威士兰</option>
+										<option value="TC">TC:土克斯及开科斯群岛</option>
+										<option value="TD">TD:查德</option>
+										<option value="TF">TF:法属南部属地</option>
+										<option value="TG">TG:多哥</option>
+										<option value="TH">TH:泰国</option>
+										<option value="TJ">TJ:塔吉克</option>
+										<option value="TK">TK:托克劳群岛</option>
+										<option value="TL">TL:东帝汶</option>
+										<option value="TM">TM:土库曼</option>
+										<option value="TN">TN:突尼斯</option>
+										<option value="TO">TO:东加</option>
+										<option value="TR">TR:土耳其</option>
+										<option value="TT">TT:特立尼达和多巴哥</option>
+										<option value="TV">TV:吐瓦鲁</option>
+										<option value="TW">TW:中国台湾</option>
+										<option value="TZ">TZ:坦桑尼亚</option>
+										<option value="UA">UA:乌克兰</option>
+										<option value="UG">UG:乌干达</option>
+										<option value="UM">UM:美国边疆小岛</option>
+										<option value="UY">UY:乌拉圭</option>
+										<option value="UZ">UZ:乌兹别克</option>
+										<option value="VA">VA:梵蒂冈</option>
+										<option value="VC">VC:圣文森特和格林纳丁斯</option>
+										<option value="VE">VE:委内瑞拉</option>
+										<option value="VG">VG:英属维尔京群岛</option>
+										<option value="VI">VI:美属维尔京群岛</option>
+										<option value="VN">VN:越南</option>
+										<option value="VU">VU:瓦努阿图</option>
+										<option value="WF">WF:沃里斯与伏塔那岛</option>
+										<option value="WS">WS:萨摩亚</option>
+										<option value="YE">YE:也门</option>
+										<option value="YT">YT:美亚特</option>
+										<option value="ZA">ZA:南非</option>
+										<option value="ZM">ZM:赞比亚</option>
+										<option value="EU">EU:欧盟</option>
+									</select>
+								
+							</div>
+							<div class="form-group">
+									<div class="checkbox">
+										<label title="">
+											<input type="checkbox" name="termsAgreement" required="" value="on">
+												<span style="padding-left:20px;">我在此确认，本网站所包含的信息和/或其中的白皮书不构成我所做出的任何投资或购买决定的基础。我声明我对加密货币/区块链技术非常熟悉和胜任，在必要时寻求独立专业建议，并且充分意识到购买EST令牌所涉及的各种风险（可预见和不可预见），包括但不限于IT安全问题，市场波动和监管不确定性。我进一步接受并承认我的个人资料将被收集并确认我同意此处包含的<a>隐私政策</a>和<a>条款</a>。</span>
+										</label>
+									</div>
+							</div>
+							<div class="form-group">
+									<div class="checkbox">
+										<label title="">
+											<input type="checkbox" name="countryAgreement" required="" value="on">
+											<span style="padding-left:20px;">我在此确认，我不是中国国籍，美国公民，美国居民或任何禁止出售EST代币的司法管辖区的居民。</span>
+										</label>
+									</div>
+							</div>
+							<div class="bottom-box">
+								<button type="submit" class="btn btn-default">提交</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="assets/js/jquery-1.12.2.js"></script>
+	<script>
+		$('input:file').change(function(){
+			$(this).siblings($('input:text')).val($(this).val())
+		});
+        function getCookie(name){
+            var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+            if(arr != null) return unescape(arr[2]); return null;
+        }
+        $('#csrf_test_name').val(getCookie('csrf_cookie_name'));
+	</script>
+</body>
+</html>
