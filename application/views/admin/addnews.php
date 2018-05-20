@@ -187,42 +187,42 @@
                                                 <label class="control-label">中文标题</label>
                                                 <div class="controls">
                                                     <input type="text" name='cn_title' placeholder="请填写中文标题" class="m-wrap large" value=""/>
-                                                    <span class="help-inline">必填</span>
+                                                    <span class="help-inline">最少填写一组对应的标题和链接</span>
                                                 </div>
                                             </div>
                                             <div class="control-group">
                                                 <label class="control-label">英文标题</label>
                                                 <div class="controls">
                                                     <input type="text" name='en_title' placeholder="请填写英文标题" class="m-wrap large" value=""/>
-                                                    <span class="help-inline">必填</span>
+                                                    <span class="help-inline">最少填写一组对应的标题和链接</span>
                                                 </div>
                                             </div>
                                             <div class="control-group">
                                                 <label class="control-label">韩文标题</label>
                                                 <div class="controls">
                                                     <input type="text" name='kr_title' placeholder="请填写韩文标题" class="m-wrap large" value=""/>
-                                                    <span class="help-inline">必填</span>
+                                                    <span class="help-inline">最少填写一组对应的标题和链接</span>
                                                 </div>
                                             </div>
                                             <div class="control-group">
                                                 <label class="control-label">中文新闻链接</label>
                                                 <div class="controls">
                                                     <input type="text" name='cn_url' placeholder="请填写链接" class="m-wrap large" value=""/>
-                                                    <span class="help-inline">必填(必须为完整url，例：http://www.baidu.com)</span>
+                                                    <span class="help-inline">必须为完整url，例：http://www.baidu.com</span>
                                                 </div>
                                             </div>
                                             <div class="control-group">
                                                 <label class="control-label">英文文新闻链接</label>
                                                 <div class="controls">
                                                     <input type="text" name='en_url' placeholder="请填写链接" class="m-wrap large" value=""/>
-                                                    <span class="help-inline">必填(必须为完整url，例：http://www.baidu.com)</span>
+                                                    <span class="help-inline">必须为完整url，例：http://www.baidu.com</span>
                                                 </div>
                                             </div>
                                             <div class="control-group">
                                                 <label class="control-label">韩文新闻链接</label>
                                                 <div class="controls">
                                                     <input type="text" name='kr_url' placeholder="请填写链接" class="m-wrap large" value=""/>
-                                                    <span class="help-inline">必填(必须为完整url，例：http://www.baidu.com)</span>
+                                                    <span class="help-inline">必须为完整url，例：http://www.baidu.com</span>
                                                 </div>
                                             </div>
                                             <div class="control-group">

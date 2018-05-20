@@ -113,14 +113,14 @@ class Admin extends CI_Controller    {
         if($this->input->method() == 'post') {
             // 获取数据
             $post = $this->input->post();
-            // 标题和链接都不能为空
-            if(!$post['cn_title']||!$post['en_title']||!$post['kr_title']||!$post['cn_url']||!$post['en_url']||!$post['kr_url']){
-                echo '<script>alert("标题和链接都不能为空！");window.location.href="/index.php?c=admin&m=editnews&newsid='.$post['id'].'";</script>';
+            // 请最少填写一组对应的标题和链接
+            if(!(($post['cn_title']&&$post['cn_url'])||($post['en_title']&&$post['en_url'])||($post['kr_title']&&$post['kr_url']))){
+                echo '<script>alert("请最少填写一组对应的标题和链接！");window.location.href="/index.php?c=admin&m=editnews&newsid='.$post['id'].'";</script>';exit;
             }
             // 发布时间不能为0 格式必须正确
             $post['publish_time'] = strtotime($post['publish_time']);
             if(!$post['publish_time']){
-                echo '<script>alert("请按照规定格式填写发布时间！");window.location.href="/index.php?c=admin&m=editnews&newsid='.$post['id'].'";</script>';
+                echo '<script>alert("请按照规定格式填写发布时间！");window.location.href="/index.php?c=admin&m=editnews&newsid='.$post['id'].'";</script>';exit;
             }
             $post['add_time'] = strtotime($post['add_time']);
             // update数据库
@@ -153,14 +153,14 @@ class Admin extends CI_Controller    {
         date_default_timezone_set('PRC');
         if($this->input->method() == 'post') {
             $post = $this->input->post();
-            // 标题和链接都不能为空
-            if(!$post['cn_title']||!$post['en_title']||!$post['kr_title']||!$post['cn_url']||!$post['en_url']||!$post['kr_url']){
-                echo '<script>alert("标题和链接都不能为空！");window.location.href="/index.php?c=admin&m=addnews";</script>';
+            // 请最少填写一组对应的标题和链接
+            if(!(($post['cn_title']&&$post['cn_url'])||($post['en_title']&&$post['en_url'])||($post['kr_title']&&$post['kr_url']))){
+                echo '<script>alert("请最少填写一组对应的标题和链接！");window.location.href="/index.php?c=admin&m=addnews";</script>';exit;
             }
             // 发布时间不能为0 格式必须正确
             $post['publish_time'] = strtotime($post['publish_time']);
             if(!$post['publish_time']){
-                echo '<script>alert("请按照规定格式填写发布时间！");window.location.href="/index.php?c=admin&m=addnews";</script>';
+                echo '<script>alert("请按照规定格式填写发布时间！");window.location.href="/index.php?c=admin&m=addnews";</script>';exit;
             }
             $post['add_time'] = time();
             // insert 数据库

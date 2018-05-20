@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/admin/chosen-bootstrap/chosen/chosen.css" />
     <link rel="stylesheet" href="/assets/admin/data-tables/DT_bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="/assets/admin/uniform/css/uniform.default.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/admin/css/news.css" />
     <link rel="shortcut icon" href="favicon.ico" />
 </head>
 <!-- END HEAD -->

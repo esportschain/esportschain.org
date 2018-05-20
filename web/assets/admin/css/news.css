@@ -1,0 +1,18 @@
+.portlet-body {
+	overflow: hidden;
+}
+.portlet-body table.table {
+	max-width: 100% !important;
+	table-layout: fixed;
+}
+.portlet-body table.table td {
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap;
+}
+.table-advance thead tr th:nth-child(1) {
+	width: 25px;
+}
+.table-advance thead tr th {
+	font-size: 12px;
+}
