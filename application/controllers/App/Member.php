@@ -523,6 +523,10 @@ class Member extends EST_Controller
         if($user['password'] != md5($oldPwd . $user['slat'])) {
             return $this->showMessage('Old password is incorrect', [], 400, 4);
         }
+		
+		if($user['password'] == md5($newPwd . $user['slat'])) {
+            return $this->showMessage('The new password is not consistent with the old code', [], 400, 4);
+        }
 
         $result = $this->user->edit($this->uid, ['password' => md5($newPwd . $user['slat'])]);
 
@@ -660,6 +664,12 @@ class Member extends EST_Controller
             return $this->showMessage('User not logged in', [], 400, 1);
         }
 
+		$this->load->model('member/user');
+        $user = $this->user->getByUid($this->uid);
+        if(empty($user)) {
+            return $this->showMessage('User does not exist', $result, 400, 2);
+        }
+		
         $this->load->library('upload');
         $config['upload_path'] = './uploads/avatar/';
       
