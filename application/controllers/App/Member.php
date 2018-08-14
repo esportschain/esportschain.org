@@ -950,4 +950,142 @@ class Member extends EST_Controller
 
         return $this->showMessage('success');
     }
+	
+	    /**
+     * [resetPwdVcode]
+     * @Author   hq
+     * @DateTime 2018-08-09
+     * @return   [type]     [description]
+     */
+    public function resetPwdVcode()
+    {
+        if(!$this->beforeAction()) {
+            return $this->showMessage('Unauthorized', [], 401, 1);
+        }
+
+        $email = trim($this->input->post('email'));
+        if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email)) {
+            return $this->showMessage('invalid email address', [], 400, 1);
+        }
+
+        $this->load->model('member/user');
+        $user = $this->user->getUserByEmail($email);
+        if(empty($user)) {
+            return $this->showMessage('the user does not exist', [], 400, 2);
+        }
+
+        $data = [
+            'vcode'   => $this->generateVcode(4),
+            'created' => time(),
+        ];
+
+        
+        $this->load->library('email');
+        $this->email->from('noreply@esportschain.org', 'Esports Chain');
+        $this->email->to($email);
+        $this->email->set_mailtype('html');
+        $this->email->subject('Reset password authentication code');
+        $content = '
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div style="margin: auto;width: 600px;">
+        <div style="margin-bottom: 20px;">Hello,</div>
+        <div style="margin-bottom: 40px;">Your EST verification code is "' . $data['vcode'] . '", valid for 15 minutes, please verify in time！</div>
+        <div style="text-align: right;">EST Team</div>
+    </div>
+</body>
+</html>';
+        $this->email->message($content);
+        $res = $this->email->send();
+        if(!$res) {
+            return $this->showMessage('Mail failed to send', [], 400, 3);
+        }
+
+        $this->load->driver('cache');
+        $this->cache->redis->save('Est_User_Email_Forget_Pwd_Vcode-' . $email, $data, 900);
+        return $this->showMessage('success');
+    }
+
+    /**
+     * [checkResetPwd ]
+     * @Author   hq
+     * @DateTime 2018-08-09
+     * @return   [type]     [description]
+     */
+    public function checkResetPwd()
+    {
+        if(!$this->beforeAction()) {
+            return $this->showMessage('Unauthorized', [], 401, 1);
+        }
+
+
+        $email = trim($this->input->post('email'));
+        $vcode = strtolower(trim($this->input->post('vcode')));
+
+        $this->load->driver('cache');
+        $vData = $this->cache->redis->get('Est_User_Email_Forget_Pwd_Vcode-' . $email);
+        if(empty($vData)) {
+            return $this->showMessage('Please get the verification code first', [], 400, 1);
+        }
+
+        if($vcode != strtolower($vData['vcode'])) {
+            return $this->showMessage('Verification code error', [], 400, 2);
+        }
+
+        if(time() > $vData['created'] + 15 * 60) {
+            return $this->showMessage('Verification code has expired', [], 403, 3);
+        }
+
+
+        $this->load->model('member/user');
+        $user = $this->user->getUserByEmail($email);
+        if(empty($user)) {
+            return $this->showMessage('the user does not exist', [], 400, 4);
+        }
+
+  
+        $newPwd = $this->generateVcode(8);
+        $data = [
+            'password' => md5(strval($newPwd) . $user['slat']),
+        ];
+        $result = $this->user->edit($user['uid'], $data);
+        if($result) {
+
+            $this->load->library('email');
+            $this->email->from('noreply@esportschain.org', 'Esports Chain');
+            $this->email->to($email);
+            $this->email->set_mailtype('html');
+            $this->email->subject('Reset the password success');
+            $content = '
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div style="margin: auto;width: 600px;">
+        <div style="margin-bottom: 20px;">Hello,</div>
+        <div style="margin-bottom: 40px;">Your new EST application password is "' . $newPwd . '", please use this password to login, then reset your password as soon as possible.</div>
+        <div style="text-align: right;">EST Team</div>
+    </div>
+</body>
+</html>';
+            $this->email->message($content);
+
+            $res = $this->email->send();
+            if(!$res) {
+                return $this->showMessage('Mail failed to send', [], 400, 5);
+            }
+
+            $this->cache->redis->delete('Est_User_Email_Forget_Pwd_Vcode-' . $email);
+            return $this->showMessage('success');
+        }
+
+        return $this->showMessage('Reset the password failed, please try again later', [], 400, 6);
+    }
+
 }
