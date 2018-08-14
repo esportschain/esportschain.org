@@ -1,0 +1,1210 @@
+.container {
+	background: #15141F;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	padding: 0;
+}
+.box{
+	background: #1D1D2A;
+	margin-bottom: 8px;
+	padding:15px 15px 10px;
+}
+.pad {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.font-red {
+    color:  #CA2A2D !important;
+}
+.font-blue {
+    color: #3A6CCE !important;
+}
+.font-orange {
+	color: #DC6931 !important;
+}
+.font-green {
+	color: #43A25D !important;
+}
+.font-purple {
+	color: #8871EC !important;
+}
+.font-fff {
+	color: #fff !important;
+}
+.bg-blue {
+	background: #3A6CCE !important;
+}
+.bg-green {
+	background: #43A25D !important;
+}
+.bg-orange {
+	background: #DC6931 !important;
+}
+.bg-purple {
+	background: #8871EC !important;
+}
+.mb20 {
+	margin-bottom: 20px;
+}
+.team-name {
+	margin-top: 20px;
+}
+.fontcolo-blue {
+	color: #17A1F7;
+}
+.fontcolo-green {
+	color: #50E3C2
+}
+.mt35 {
+	margin-top: 35px;
+}
+/* 公共小标题 */
+.pubg-title {
+	width: 100%;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:space-between;
+/* 	align-items:center; */
+	margin-bottom: 12px;
+	line-height: 1;
+}
+.pubg-title p em{
+	display: inline;
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #6A7088;
+	vertical-align: middle;
+}
+.pubg-title p span {
+	display: inline-block;
+	width: 2px;
+	height: 12px;
+	vertical-align: middle;
+	background: #3A6CCE;
+	margin-right: 5px;
+}
+.pubg-title .amore em {
+	display: inline;
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #6A7088;
+	vertical-align: middle;
+}
+.pubg-title .amore i {
+	display: inline-block;
+	width: 7px;
+	height: 12px;
+	background: url('../../../images/app/pubg/right.png') no-repeat;
+	background-size: 100% 100%;
+	vertical-align: middle;
+	margin-left: 4px;
+}
+.pubg-title .gen-a{
+	display: block;
+	width: 75px;
+	height: 22px;
+	text-align: center;
+	line-height: 22px;
+	background: #3A6CCE;
+	border-radius: 2px;
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #FFF;
+}
+/* 公共头部 */
+.header {
+	width: 100%;
+	height: 80px;
+	background: #15141F;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:flex-start;
+	align-items:center;
+}
+.header .he-img {
+	width: 50px;
+	height: 50px;
+	border: 3px solid #1F2D53;
+	box-sizing:border-box;
+}
+.header .he-text {
+	width: 60%;
+	margin-left: 10px;
+}
+.header .rank-logo {
+	display: block;
+	width: 50px;
+	height:50px;
+}  
+.header .he-text p{
+	display: inline-block;
+	width: 100%;
+	font-family: PingFangSC-Medium;
+	font-size: 15px;
+	color: #FFF;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+.header .he-text span {
+	display:block;
+	width: 100%;
+	margin-top: 5px;
+}
+.header .he-text span a {
+	display: inline-block;
+	width: 36px;
+	height: 20px;
+	background: rgba(58,108,206,0.30);
+	border-radius: 2px;
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color:rgba(255,255,255,.5) ;
+	text-align: center;
+	line-height: 20px;
+	box-sizing:border-box;
+}
+.header .he-text span a.aclick {
+	background: #3A6CCE;
+	color:rgba(255,255,255,1) ;
+}
+.header-ri a {
+	display: block;
+	width: 90px;
+	height: 24px;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items:center;
+	background: rgba(255,255,255,0.06);
+	border-radius: 2px;
+	font-family: PingFangSC-Regular;
+	padding-left: 5px;
+	padding-right: 5px;
+	
+}
+.header-ri a:first-child {
+	margin-bottom: 4px;
+}
+.header-ri a span {
+	vertical-align: middle;
+	display: inline-block;
+	font-size: 10px;
+	color:rgba(255,255,255,.5);
+}
+.header-ri a i {
+	display: inline-block;
+	width: 9px;
+	height: 4px;
+	background: url('../../../images/app/pubg/wd.png') no-repeat;
+	background-size: 100%;
+	vertical-align: middle;
+}
+/* big-tab */
+.big-tab {
+	width: 100%;
+	height: 40px;
+	background: #252535;
+}
+.big-tab a {
+	display: block;
+	float: left;
+	width: 50%;
+	text-align: center;
+	line-height: 38px;
+	font-family: PingFangSC-Regular;
+	font-size: 14px;
+	color:rgba(106, 112, 136, .5);
+}
+.big-tab .big-click {
+	color: #FFF;
+	border-bottom: 2px solid #3A6CCE;
+}
+
+/* 数据分析 */
+.report .begood-list {
+	display: -webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:space-around;
+	align-items:center;
+	flex-wrap:wrap;
+}
+.report .begood-list p {
+	font-family: PingFangSC-Regular;
+	font-size: 16px;
+	color: #FFF;
+}
+.report .begood-list span {
+	font-family: PingFangSC-Regular;
+	font-size: 10px;
+	color: #6A7088;
+}
+.report .begood-list li{
+	width: 32%;
+	text-align: center;
+	height: 50px;
+	margin-bottom: 4px;
+	border: 1px solid #303046;
+	display:-webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+/* 综合数据 */
+.general .gen-le {
+	display: inline-block;
+	width: 42%;
+}
+.gen-top .gen-ri {
+	display: inline-block;
+	width: 55%;
+	vertical-align: bottom;
+}
+.gen-top .gen-ri li {
+	float: left;
+	width: 33%;
+	text-align: center;
+}
+.gen-top .gen-ri li:nth-child(2){
+	border-left: 1px solid #2B2B3F;
+	border-right: 1px solid #2B2B3F;
+}
+.gen-top .gen-ri li p {
+	width: 100%;
+	font-family: PingFangSC-Medium;
+	font-size: 16px;
+	color: #FFFFFF;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.gen-top .gen-ri li span {
+	font-family: PingFangSC-Regular;
+	font-size: 10px;
+	color: #6A7088;
+}
+.gen-top .gen-le em {
+	font-family: PingFangSC-Regular;
+	font-size: 10px;
+	color: #6A7088;
+}
+.gen-top .gen-le p,
+.gen-top .gen-le span {
+	width: 100%;
+	margin-bottom: 5px;
+}
+.gen-top .gen-le p i {
+	display: inline-block;
+	width: 55%;
+	font-family: PingFangSC-Medium;
+	font-size: 30px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 1;
+	vertical-align: bottom;
+}
+.gen-top .gen-le span i {
+	display: inline-block;
+	width: 55%;
+	font-family: PingFangSC-Regular;
+	font-size: 10px;
+}
+.gen-top .gen-le span em {
+	display: inline-block;
+	width: 38%;
+}
+.bline {
+	position: relative;
+	width: 100%;
+	height: 4px;
+	background: #2B2B3F;
+	border-radius: 50px;
+	margin-top:8px; 
+}
+.bline i {
+	display: block;
+	position: absolute;
+	left: 0;
+	top:0;
+	height: 4px;
+	border-radius: 50px;
+}
+.gen-bo {
+	display:-webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items:center;
+	flex-wrap:wrap;
+	margin-top: 10px;
+}
+.gen-bo li {
+	width: 24%;
+	height: 50px;
+	text-align: center;
+	border: 1px solid #303046;
+	margin-bottom: 5px;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+}
+
+.gen-bo li p {
+	width: 100%;
+	font-family: PingFangSC-Medium;
+	font-size: 16px;
+	color: #FFFFFF;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.gen-bo li span {
+	font-family: PingFangSC-Regular;
+	font-size: 10px;
+	color: #6A7088;
+}
+/* 雷达图 */
+.wanscore {
+	margin-top: 19px;
+	position: relative;
+}
+.radar {
+	position: relative;
+}
+.radar .radar-style {
+	width: 320px;
+	height: 300px;
+	margin: 0 auto;
+}
+@media screen and (max-width: 350px) {
+	.radar .radar-style{
+		width: 280px;
+		height: 300px;
+		margin: 0 auto;
+	}
+}
+.radar span {
+	position: absolute;
+	top:0;
+	right: 0;
+}
+.radar span em {
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #6A7088;
+	line-height: 1;
+	vertical-align: top;
+}
+.radar span i {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background: url('../../../images/app/pubg/ques.png') no-repeat;
+	background-size: 100%;
+	margin-left: 3px;
+	vertical-align: top;
+}
+.g-score .star {
+	width: 33.33%;
+	margin: 0 auto;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-flex-wrap: wrap;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items:center;
+	flex-wrap:wrap;
+}
+.g-score .star em {
+	display: block;
+	width: 15px;
+	height: 15px;
+	background: url('../../../images/app/pubg/star.png') no-repeat;
+	background-size: 100%;
+}
+.g-score p {
+	width: 100%;
+	font-family: PingFangSC-Regular;
+	font-size: 10px;
+	color: #6A7088;
+	text-align: center;
+	margin:7px 0;
+}
+/* 算法说明 */
+.stips {
+	position: absolute;
+	top:-110px;
+	left: 50%;
+	margin-left: -50%;
+	width: 100%;
+	background: #33344C;
+	border-radius: 2px;
+	padding:0 15px 10px;
+	text-align: right;
+}
+.stips .t-text {
+	text-align: left;
+}
+.stips p {
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #FFF;
+	margin-bottom: 20px;
+}
+.stips i {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url('../../../images/app/pubg/close.png') no-repeat;
+	background-size: 100%;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+.scroll-x{
+	width: 100%;
+	overflow-x:scroll;
+}
+.status-line {
+	width: 500px;
+	height: 200px;
+}
+.only-top {
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.only-top a {
+	display: block;
+	float: left;
+	width: 32%;
+	height: 32px;
+	background: rgba(255,255,255,0.10);
+	border-radius: 2px;
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #6A7088;
+	text-align: center;
+	line-height: 32px;
+}
+.only-top a:nth-child(2) {
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.only-top .status-on {
+	background: #3A6CCE;
+	color:#fff;
+}
+/* 模式 */
+.chose {
+	display: -webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items:center;
+	margin-bottom: 20px;
+}
+.chose span {
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	vertical-align: middle;
+}
+.one .cho-le i {
+	display: inline-block;
+	width: 5px;
+	height: 13px;
+	background: url('../../../images/app/pubg/one.png') no-repeat;
+	background-size: 100% 100%;
+	vertical-align: middle;
+}
+.double .cho-le i {
+	display: inline-block;
+	width: 10px;
+	height: 13px;
+	background: url('../../../images/app/pubg/double.png') no-repeat;
+	background-size: 100% 100%;
+	vertical-align: middle;
+}
+.four .cho-le i {
+	display: inline-block;
+	width: 20px;
+	height: 13px;
+	background: url('../../../images/app/pubg/four.png') no-repeat;
+	background-size: 100% 100%;
+	vertical-align: middle;
+}
+.chose p em {
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #6A7088;
+	vertical-align: middle;
+	margin-right: 4px;
+}
+.chose p i {
+	display: inline-block;
+	width: 7px;
+	height: 12px;
+	background: url('../../../images/app/pubg/right.png') no-repeat;
+	background-size: 100% 100%;
+	vertical-align: middle;
+}
+/* 游戏战绩 */
+.sm-tab {
+	display: -webkit-box;
+	-webkit-box-align: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.sm-tab a {
+	position: relative;
+	width: 49%;
+    height: 50px;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,0.10);
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    color: #FFF;
+    font-weight: 500;
+    box-sizing: border-box;
+    padding-left: 12px;
+    display: -webkit-box;
+	-webkit-box-align: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+@media screen and (max-width: 330px) {
+	.sm-tab a{
+		font-size: 10px;
+	}
+}
+.sm-tab a i {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	margin-right: 11px;
+}
+.sm-tab a .weekly {
+	background: url('../../../images/app/pubg/tab1.png') no-repeat;
+	background-size: 100%;
+}
+.sm-tab a .hero-pool {
+	background: url('../../../images/app/pubg/tab2.png') no-repeat;
+	background-size: 100%;
+}
+.sm-tab p {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: left;
+	font-family: PingFangSC-Medium;
+	font-size: 14px;
+}
+.sm-tab p em {
+	font-size: 12px;
+	display:block;
+	font-family: PingFangSC-Regular;
+	color: #6A7088;
+}
+.sm-tab span {
+	position: absolute;
+	top:50%;
+	right: 10px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url('../../../images/app/pubg/taball.png');
+    background-size: 100%;
+    margin-top: -8px;
+}
+
+
+/* 吃鸡队友模块 */
+.teamer {
+	overflow: hidden;
+}
+.teamer li {
+	float: left;
+	width: 14.28%;
+}
+.teamer li a {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.teamer img {
+	width: 100%;
+	border-radius: 50%;
+	display: block;
+}
+/* 近20场数据 */
+.dm-top {
+	display: -webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items:center;
+	font-family: PingFangSC-Regular;
+	margin-bottom: 15px;
+}
+.dm-top li {
+	width: 33%;
+	text-align: center;
+}
+.dm-top li:nth-child(2){
+	border-left: 1px solid #2B2B3F;
+	border-right: 1px solid #2B2B3F;
+}
+.dm-top .cho-le span {
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	letter-spacing: 0;
+	vertical-align: middle;
+	margin-left: 4px;
+}
+.dm-top .dmt-top em {
+	font-family: PingFangSC-Medium;
+	font-size: 15px;
+	color: #FFF;
+}
+.dm-top .dmt-top span em{
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	vertical-align: middle;
+}
+/* 小箭头s */
+.upge {
+	display: inline-block;
+	width: 6px;
+	height: 10px;
+	background: url('../../../images/app/pubg/up.png') no-repeat;
+	background-size: 100% 100%;
+	vertical-align: middle;
+}
+.downre {
+	display: inline-block;
+	width: 6px;
+	height: 10px;
+	background: url('../../../images/app/pubg/down.png') no-repeat;
+	background-size: 100% 100%;
+	vertical-align: middle;
+}
+/* 小箭头e */
+.dm-bot {
+	width: 100%;
+	height: 52px;
+	overflow: hidden;
+}
+.dm-bot .dm-bot-le {
+	float: left;
+	width: 20%;
+	height:56px;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-flex-wrap: wrap;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	background: #2B2B3F;
+}
+.dm-bot .dm-bot-le p {
+	font-family: PingFangSC-Medium;
+	font-size: 20px;
+	color: #FFF;
+}
+.dm-bot .dm-bot-le span{
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #6A7088;
+	margin-bottom: 6px;
+}
+.dm-bot-list {
+	float: right;
+	width: 80%;
+	height: 56px;
+	overflow: hidden;
+}
+.dm-bot-list li {
+	float: left;
+	width: 10%;
+	height: 28px;
+	text-align: right;
+}
+.dm-bot-list li em{
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-flex-wrap: wrap;
+	display: -webkit-inline-flex;
+	display:inline-flex;
+	flex-direction: row;
+	justify-content:center;
+	align-items:center;
+	width: 24px;
+	height: 24px;
+	font-family: PingFangSC-Regular;
+	font-size: 14px;
+	color: #FFF;
+	background: #2B2B3F;
+}
+/* 最近比赛 */
+.newmatch .nm-list {
+	position: relative;
+	width: 100%;
+	height: 80px;
+	border: 1px solid rgba(255,255,255,0.08);
+	box-shadow: 0 4px 20px 0 rgba(0,0,0,0.10);
+	padding: 5px 10px; 
+	margin-bottom: 12px;
+}
+.newmatch .nm-list:last-child {
+	margin-bottom: 0;
+}
+.nm-top {
+	width: 100%;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-flex-wrap: wrap;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items:center;
+}
+.nm-top .cho-le {
+	width: 70%;
+}
+.nm-top span {
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #6A7088;
+	vertical-align: middle;
+	margin-left: 8px;
+	margin-right: 8px;
+	display: inline-block;
+	max-width: 80%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.nm-top  em {
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-flex-wrap: wrap;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:center;
+	align-items:center;
+	width: 50px;
+	height: 14px;
+	border-radius: 2px;
+	font-family: PingFangSC-Medium;
+	font-size: 10px;
+	margin-left: 4px;
+}
+.nm-top b {
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-flex-wrap: wrap;
+	display: -webkit-inline-flex;
+	display:inline-flex;
+	flex-direction: row;
+	justify-content:center;
+	align-items:center;
+	width: 25px;
+	height: 13px;
+	font-family: PingFangSC-Regular;
+	font-size: 10px;
+	color: #FFF;
+	background: #2B2B3F;
+	vertical-align: middle;
+}
+.nm-top strong {
+	display: inline-block;
+	width: 65px;
+}
+.nm-top b.win {
+ 	background: #DC6931;
+}
+.nm-top b.ten {
+ 	background: #3A6CCE;
+}
+.nm-bot {
+	width: 95%;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items:center;
+	margin-top: 10px;
+}
+.nm-bot li {
+	width: 25%;
+	text-align: center;
+}
+.nm-bot span {
+	font-family: PingFangSC-Medium;
+	font-size: 14px;
+	color: #FFF;
+}
+.nm-bot span i {
+	font-family: PingFangSC-Medium;
+	font-size: 15px;
+	color: #FFF;
+	vertical-align: middle;
+}
+.nm-bot p {
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #6A7088;
+}
+.nm-bot li:first-child span em {
+	font-family: PingFangSC-Medium;
+	font-size: 20px;
+	color: #FFF;
+	margin-right: 5px;
+}
+.nm-bot li:nth-child(2) span em {
+	vertical-align: middle;
+	font-size: 12px;
+}
+.r-more {
+	display: block;
+	position: absolute;
+	top:50%;
+	right: 10px;
+	margin-top: -6px;
+	width: 7px;
+	height: 12px;
+	background: url('../../../images/app/pubg/right.png') no-repeat;
+	background-size: 100% 100%;
+}
+/* 成就标签 */
+/* 击杀王 */
+.killk {
+	border: 1px solid #FF5757;
+	color: #FF5757;
+}
+/* 枪枪爆头 */
+.gunshot {
+	border: 1px solid #FF5A4A;
+	color: #FF5A4A;
+}
+/* 爆炸输出 */
+.bomb {
+	border: 1px solid #FF7342;
+	color: #FF7342;
+}
+/* 大杀特杀 */
+.slaughter {
+	border: 1px solid #FF9A41;
+	color: #FF9A41;
+}
+/* 落地成盒 */
+.landingbox {
+	border: 1px solid  #37CDFF;
+	color:  #37CDFF;
+}
+/* 队内最苟 */
+.liveon {
+	border: 1px solid #4EA7FF;
+	color: #4EA7FF;
+}
+/* 佛系吃鸡 */
+.nokill {
+	border: 1px solid #598DFF;
+	color: #598DFF;
+}
+/* 救死扶伤 */
+.helpall {
+	border: 1px solid #2FB554;
+	color: #2FB554;
+}
+/* 长跑健将 */
+.longrun {
+	border: 1px solid #9974FF;
+	color: #9974FF;
+}
+/* 车技稳健 */
+.driving {
+	border: 1px solid #AD51FF;
+	color: #AD51FF;
+}
+/* 无战绩样式 */
+.nodata {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.nodata p {
+	font-family: PingFangSC-Regular;
+	font-size: 14px;
+	color: #6A7088;
+	margin-top: 100px;
+}
+.begood {
+	margin-top: 0;
+}
+/* 吃鸡队友页面 */
+.teammate {
+	background: #1D1D2A;
+}
+/* 吃鸡队友 */
+.teamer-list li {
+	margin-bottom: 8px;
+}
+.teamer-list .te-top {
+	display: -webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items:center;
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #6A7088;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+.teamer-list .te-top p,
+.teamer-list .te-player span{
+	display: block;
+	width: 25%;
+	text-align: center;
+}
+.teamer-list .te-top p:first-child {
+	padding-left: 5px;
+}
+.teamer-list .te-top p:first-child,
+.teamer-list .te-player .teamer-name{
+	width: 45%;
+	text-align: left;
+}
+.teamer-list .te-player {
+	display: -webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items:center;
+	font-family: PingFangSC-Regular;
+	font-size: 14px;
+	color: #FFF;
+}
+.te-player .teamer-name img{
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+.te-player .teamer-name span {
+	display: inline-block;
+	width: 70%;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+.teamer-list .te-player span a {
+	display: inline-block;
+	width: 50px;
+	height: 22px;
+	border-radius: 98px;
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #FFF;
+	text-align: center;
+	line-height: 22px;
+}
+/* 底部分享 */
+.pb60 {
+	padding-bottom: 60px !important;
+}
+.download-bottom {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	height: 60px;
+	background: rgba(0,0,0,.8);
+	padding: 12px;
+}
+
+.download-bottom a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
+
+.download-bottom .fl {
+	width: 70%;
+}
+
+.download-bottom .fl img {
+	width: 40px;
+	height: 40px;
+	margin-right: 7px;
+}
+
+.download-bottom .fl p {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.download-bottom .fl span {
+	display: block;
+	font-size: 14px;
+}
+
+.download-bottom .fl i {
+	display: block;
+	margin-top: -1px;
+	font-size: 12px;
+}
+
+.download-bottom .fr {
+	width: 81px;
+	height: 33px;
+	border:1px solid #fff;
+	margin-top: 2px;
+	text-align: center;
+	line-height: 30px;
+}
+/* 数据异常样式 */
+.abnormal {
+	width: 100%;
+	height: 24px;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items:center;
+}
+.abnormal span {
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: rgba(255,255,255,0.88);
+}
+.abnormal i {
+	display: block;
+	width: 10px;
+	height: 10px;
+	background: url('../../../images/app/pubg/anclose.png') no-repeat;
+	background-size: 100%;
+}
+.abnormal.abred {
+	background: rgba(255, 68, 47, .5);
+}
+.abnormal.aborange {
+	background: rgba(255, 154, 37, .5);
+}
+/* 未获取到数据 */
+.nonedata {
+	width: 100%;
+	margin-top: 135px;
+	text-align: center;
+}
+.nonedata i {
+	display: inline-block;
+	width: 60px;
+	height: 85px;
+	background: url(../../../images/app/lol_data/serch.png);
+	background-size: 100% 100%;
+}
+.nonedata p {
+	text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #6A7088;
+	margin-top: 20px;
+}
+/* 数据加载效果 */
+.dataing {
+	margin-top:100px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+}
+.dataing .loading {
+	width: 48px;
+	height: 48px;
+	margin: 0 auto;
+	background: url('../../../images/app/pubg/anim.png') no-repeat;
+	background-size: 100%;
+	-webkit-animation: load 1s ease infinite;  
+}
+@-webkit-keyframes load {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+	}
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.dataing h2 {
+	font-family: PingFangSC-Regular;
+	font-size: 16px;
+	color: #6A7088;
+	margin-top: 20px;
+	margin-bottom: 14px;
+}
+.dataing p {
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #6A7088;
+	line-height: 18px;
+	text-align: center;
+}

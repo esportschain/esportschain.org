@@ -1,0 +1,802 @@
+
+/*-----初始化------*/
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+hr,
+fieldset,
+form,
+label,
+legend,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+summary,
+hgroup
+{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border: 0;
+        font-family:'Helvetica Neue', 'Hiragino Sans GB', 'Helvetica Neue', 'WenQuanYi Micro Hei', SimSun, sans-serif, 'Lantinghei SC', STHeiti, 'Open Sans', Arial;
+        outline: none;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color:transparent;
+}
+
+img {
+    -webkit-touch-callout: none; /* 禁止长按图片弹出菜单 */
+    -webkit-user-select: none;
+}
+
+/* 文本选中 */
+a,html, body {
+    -webkit-user-select: none;   /* 禁止选中文本（如无文本选中需求，此为必选项） */
+    user-select: none;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+    
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+    
+.clearfix:after {
+    clear: both;
+}
+    
+.clear {
+    clear: both;
+}
+
+input {
+    font-family:"\5FAE\8F6F\96C5\9ED1", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif, "Lantinghei SC";
+    cursor: pointer;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    -webkit-appearance: none;
+    outline: none;
+    border: none;
+}
+
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus,
+button:focus {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color:transparent;
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: #414141;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+span {
+    -webkit-tap-highlight-color:transparent;
+}
+
+header,
+nav,
+section,
+article,
+footer,
+figure,
+figcaption {
+    display: block;
+    -webkit-tap-highlight-color:transparent;
+}
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color:transparent;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+i,
+em,
+u,
+b,
+strong{
+    font-style: normal;
+    font-weight: normal;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html {
+    height: 100%;
+    background-color: #fff ;
+}
+
+body {
+    background-color: #fff;
+}
+@-webkit-viewport {
+    width: device-width;
+}
+
+@-moz-viewport {
+    width: device-width;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@-o-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    color: #37302a;
+}
+
+/*------初始化 end---------*/
+
+/* 图标字体 */
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../../images/fonts/fontawesome-webfont.eot?v=4.5.0');
+    src: url('../../images/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0') format('embedded-opentype'), 
+    url('../../images/fonts/fontawesome-webfont.woff2?v=4.5.0') format('woff2'), 
+    url('../../images/fonts/fontawesome-webfont.woff?v=4.5.0') format('woff'), 
+    url('../../images/fonts/fontawesome-webfont.ttf?v=4.5.0') format('truetype'), 
+    url('../../images/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+ }
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*------公共类 start--------*/
+
+.por {
+    position: relative;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.live {
+    border-radius: 3px;
+    padding: 1px 5px;
+    background-color: #d7382d;
+    color: #fff;
+}
+
+.tc {
+    text-align: center;
+}
+
+.tl {
+    text-align: left!important;
+}
+
+.tr {
+    text-align: right;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt25 {
+    margin-top: 25px;
+}
+
+.bor {
+    border-bottom:1px solid #f2f3f3;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb0 {
+    margin-bottom: 0!important;
+}
+
+.mb15 {
+    margin-bottom: 15px!important;
+}
+
+.ov {
+    overflow: hidden;
+}
+
+.tbold {
+    font-weight: bold;
+}
+
+.bn {
+    border:0 none!important;
+}
+
+.wo {
+    width: 100%;
+    overflow: hidden;
+}
+
+.rednum {
+    color: #ff382e!important;
+}
+
+.bluenum {
+    color: #0d5bdd!important;
+}
+
+.csgo-bluenum {
+    color: #008dd2;
+}
+
+.csgo-rednum {
+    color: #ba2d3d;
+}
+
+.db {
+    display: block;
+}
+
+.ptop {
+    padding-top:9px!important;
+}
+
+.mr0 {
+    margin-right: 0!important;
+}
+
+.fontcolor-ccc {
+    color: #ccc!important;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 25px 15px 30px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.greennum {
+    color: #0a6f00!important;
+}
+
+.no-content {
+    margin-left: 10px;
+    margin-bottom: 14px;
+    line-height: 18px;
+    font-size: 14px;
+    color: #a5aab3;
+}
+
+/* 战队数据 */
+.c-list {
+    width: 100%;
+    margin-top: 15px;
+}
+.c-list tr {
+    height: 30px;
+}
+.c-list td:first-child,
+.c-list td:last-child {
+    width: 10%;
+    font-size:12px;
+}
+
+@media screen and (min-width: 768px) {
+   .c-list td:first-child,
+    .c-list td:last-child {
+        width: 6%;
+    } 
+}
+
+.c-list td:nth-child(2),
+.c-list td:nth-child(4) {
+    width: 25%;
+}
+
+@media screen and (min-width: 454px) {
+    .c-list td:nth-child(2),
+    .c-list td:nth-child(4) {
+        width: 30%;
+    }
+}
+
+.c-list td:nth-child(3) {
+    width: 21%;
+    font-size:12px;
+    color:#a2a7b0;
+}
+
+@media screen and (min-width: 768px) {
+    .c-list td:nth-child(3) {
+        width: 12%;
+    }
+}
+.c-list span {
+    position:relative;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius:2px;
+    background-color: #f3f3f3;
+}
+.c-list i {
+    position:absolute;
+    top:0;
+    display: block;
+    height: 100%;
+    border-radius:2px;          
+}
+.blueline {
+    background-color: #4385f4;
+}
+.grayline {
+    background-color: #dadddf;
+}
+.c-list td:nth-child(2) i {
+    right:0;
+}
+.c-list td:nth-child(4) i {
+    left:0;
+}
+
+.c-title {
+    width: 100%;
+    overflow:hidden;
+}
+
+.c-title li {
+    float:left;
+    width: 36%;
+    font-size:16px;
+}
+
+.c-title li:first-child, 
+.c-title li:last-child {
+    width: 32%;
+    font-size:18px;
+    font-weight:600;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+} 
+.hid {
+    height: 30px;
+    margin: 0 10px;
+    background: #eee;
+    overflow: hidden;
+}
+
+.c-tab {
+    height: 48px;
+    background: transparent;
+    overflow-x: scroll; 
+    /*scrollbar-track-color：transparent;*/
+    scrollbar-base-color:transparent;
+}
+
+.c-tab ul {
+    width:auto;
+    height: 30px;  
+}
+.c-tab li {
+    float: left; 
+}
+
+.c-tab li a {
+    display: block;
+    width: auto;
+    min-width: 75px;
+    height: 30px;
+    background-color: #eee;
+    padding:0 3px;
+    text-align:center;
+    line-height:32px;
+    font-size:14px;
+    font-weight:600;
+    color:#a3a7ae;
+}
+
+.c-tab .tabclick {
+    background-color: #000;
+    color:#fff;
+}
+
+/* 无网络样式 */
+.no-network {
+    text-align:center;
+}
+
+.network {
+    width: 175px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.tip-text {
+    width: 100%;
+    text-align:center;
+    font-size:14px;
+    color:#a2a7b0;
+}
+
+.net-btn {
+    display: block;
+    width: 110px;            
+    height: 30px;            
+    border-radius:4px;
+    border:1px solid #000;
+    margin: 60px auto 0;
+    text-align:center;
+    line-height:30px;            
+    font-size:16px;            
+}
+
+@media screen and (min-width: 360px) {
+    .network {
+        width: 230px;
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+    .tip-text {
+        font-size:16px;
+    }
+    .net-btn {
+        width: 120px;
+        height: 38px;
+        line-height:38px;
+        font-size:18px;
+    }
+}
+
+/* 红色下载 */
+.download {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 22;
+    width: 100%;
+    height: 70px;
+    background: #f8f8f8;
+    padding:10px 10px;
+}
+
+.bottom-download {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    background: rgba(0,0,0,.8);
+    display: none;
+}
+
+.download a {
+    display: block;
+    height: 100%;
+}
+
+.d-left {
+    float: left;
+    width: 70%;
+}
+
+.d-logo {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+}
+
+.d-text {
+    float: left;
+    margin-top: 4px;
+    color: #333;
+    overflow:hidden;
+}
+
+.bottom-download .d-text {
+    color: #fff;
+}
+
+.d-text span {
+    line-height: 14px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.d-text p {
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+.d-right {
+    float: right;
+    width: 80px;
+    height: 35px;
+    border-radius: 4px;
+    background: #FF382E;
+    margin-top: 7px;
+    text-align: center;
+    line-height: 35px;
+    color: #FFF;
+}
+
+/* 比赛详情页 头部公共部分 start*/
+/* 头部信息部分 */
+.top {
+    padding-top: 30px;
+}
+
+.top h1 {
+    margin-bottom: 18px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+
+.team-pic {
+    width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    overflow: hidden;
+}
+
+.team-pic li:first-child,
+.team-pic li:last-child {
+    width: 23%;
+    text-align: center;
+}
+
+.team-pic li.middle {
+    width: 54%;
+}
+
+.team-pic li a {
+    width: 100%;
+    text-align: center;
+}
+
+.team-pic li img {
+    width: 80%;
+}
+
+.team-pic li p {
+    width: 100%;
+    font-size: 14px;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.num {
+    margin-bottom: 9px;
+    text-align: center;
+    font-size: 36px;
+}
+
+.time {
+    text-align: center;
+    font-size: 12px;
+}
+
+.search {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 12px;
+    color: #008cd3;
+}
+
+.game-action {
+    height: 30px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.game-action .ov {
+    height: 40px;
+    overflow-x: scroll; 
+}
+
+.game {
+    width: 100%;
+    height: 30px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.game li {
+    float: left;
+    width: 75px;
+    height: 30px;
+    background: #6a697b;
+    margin-right: 1px;
+    opacity: 0.6;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    color: rgba(255,255,255,.6);
+}
+
+.game li a {
+    color: rgba(255,255,255,.6);
+}
+
+.game li:first-child {
+    border-radius: 3px 0 0 3px;
+}
+
+.game li:last-child {
+    border-radius: 0 3px 3px 0;
+}
+
+.game .click {
+    background: #6a697b;
+    color: #fff;
+    opacity: 1;
+}
+
+.game .click a {
+    color: #fff;    
+}
+/* 头部信息部分 end */
+/* 战队名称 start */
+.team-name {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.team-name li {
+    float: left;
+}
+
+.team-name li .sheng {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 1px;
+    width: 16px;
+    height: 16px;
+    background: #ff382e;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 12px;
+}
+
+.team-name li:first-child,
+.team-name li:last-child {
+    width: 35%;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.team-name li a {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 76%;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.team-name li:last-child {
+    text-align: right;
+}
+
+.team-name li:nth-child(2) {
+    width: 30%;
+    text-align: center;
+    color: #fff;
+}
+
+.team-name li em {
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    background: url(../../images/app/data/num.png) no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    margin: -2px 4px 0;
+}
+/* 战队名称 end */
+
+.title {
+    width: 100%;
+    height: 14px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #9696b5;
+}
+
+.title span {
+    display: inline-block;
+    width: 25%;
+    margin-top: -5px;
+    text-align: center;
+}
+
+.title i {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1px;
+    width: 35%;
+    background: #9696b5;
+}
+
+/* 比赛详情页 头部公共部分 end*/
+

@@ -1,0 +1,579 @@
+.container {
+	background: #15141F;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	padding: 0;
+}
+.box{
+	background: #1D1D2A;
+	margin-bottom: 8px;
+	padding:10px 15px;
+}
+.pad {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.font-red {
+    color:  #CA2A2D !important;
+}
+.font-blue {
+    color: #3A6CCE !important;
+}
+.font-orange {
+	color: #DC6931 !important;
+}
+.font-green {
+	color: #43A25D !important;
+}
+.font-purple {
+	color: #8871EC !important;
+}
+.font-fff {
+	color: #fff !important;
+}
+.bg-blue {
+	background: #3A6CCE !important;
+}
+.bg-green {
+	background: #43A25D !important;
+}
+.bg-orange {
+	background: #DC6931 !important;
+}
+.bg-purple {
+	background: #8871EC !important;
+}
+.mb20 {
+	margin-bottom: 20px;
+}
+.fontcolo-blue {
+	color: #17A1F7;
+}
+.fontcolo-green {
+	color: #50E3C2
+}
+/* 公共小标题 */
+.pubg-title {
+	width: 100%;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items:center;
+	margin-bottom: 15px;
+}
+.pubg-title p em{
+	display: inline;
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #6A7088;
+	vertical-align: middle;
+}
+.pubg-title p span {
+	display: inline-block;
+	width: 2px;
+	height: 12px;
+	vertical-align: middle;
+	background: #3A6CCE;
+	margin-right: 5px;
+}
+.pubg-title p i {
+	display: inline-block;
+	width: 7px;
+	height: 12px;
+	background: url('../../../images/app/pubg/right.png') no-repeat;
+	background-size: 100% 100%;
+	vertical-align: middle;
+	margin-left: 4px;
+}
+/* 公共头部 */
+.header {
+	width: 100%;
+	height: 50px;
+	background: #15141F;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items:center;
+}
+.header p{
+	display: inline-block;
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #6A7088;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+.header .cho-le span {
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #6A7088;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+.header .he-ri span {
+	font-family: PingFangSC-Semibold;
+	font-size: 20px;
+	color: #FFF;
+}
+.header .he-ri em {
+	font-family: PingFangSC-Regular;
+	font-size: 10px;
+	color: #fff;
+}
+/* 个人数据 */
+.one .cho-le i {
+	display: inline-block;
+	width: 5px;
+	height: 13px;
+	background: url('../../../images/app/pubg/one.png') no-repeat;
+	background-size: 100% 100%;
+	vertical-align: middle;
+}
+.double .cho-le i {
+	display: inline-block;
+	width: 10px;
+	height: 13px;
+	background: url('../../../images/app/pubg/double.png') no-repeat;
+	background-size: 100% 100%;
+	vertical-align: middle;
+}
+.four .cho-le i {
+	display: inline-block;
+	width: 20px;
+	height: 13px;
+	background: url('../../../images/app/pubg/four.png') no-repeat;
+	background-size: 100% 100%;
+	vertical-align: middle;
+}
+.player {
+	display: -webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items:center;
+	margin-top: 10px;
+}
+.player .p-name {
+	width: 80%;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:flex-start;
+	align-items:center;
+}
+.player img {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+.player span {
+	font-family: PingFangSC-Regular;
+	font-size: 14px;
+	color: #FFF;
+	vertical-align: middle;
+	max-width: 60%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.player em {
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-flex-wrap: wrap;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:center;
+	align-items:center;
+	width: 45px;
+	height: 14px;
+	border-radius: 2px;
+	font-family: PingFangSC-Medium;
+	font-size: 10px;
+	margin-left: 4px;
+} 
+.player .change {
+	text-align: center;
+}
+.player .change .change-s {
+	display: inline-block;
+}
+.player .change .change-s em {
+	font-family: PingFangSC-Medium;
+	font-size: 15px;
+	vertical-align: middle;
+	display: inline;
+}
+.player .change p {
+	font-family: PingFangSC-Regular;
+	font-size: 10px;
+	color: #6A7088;
+}
+/* 小箭头s */
+.upge {
+	display: inline-block;
+	width: 6px;
+	height: 12px;
+	background: url('../../../images/app/pubg/up.png') no-repeat;
+	background-size: 100% 100%;
+	vertical-align: middle;
+}
+.downre {
+	display: inline-block;
+	width: 6px;
+	height: 12px;
+	background: url('../../../images/app/pubg/down.png') no-repeat;
+	background-size: 100% 100%;
+	vertical-align: middle;
+}
+.play-data {
+	border: 1px solid #303046;
+	border-top: none;
+	overflow: hidden;
+	margin-top: 10px;
+}
+.play-data .fight {
+	overflow: hidden;
+}
+.play-data p {
+	width: 100%;
+	height: 32px;
+	line-height: 30px;
+	padding-left: 7px;
+	border-top: 1px solid #303046;
+}
+.play-data p span {
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #6A7088;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+.play-data p em {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+}
+/* 小图标 */
+/* 绿色  */
+.green1 {
+	background:url('../../../images/app/pubg/green1.png') no-repeat;
+	background-size: 100% 100%;
+}
+.greenrun {
+	background:url('../../../images/app/pubg/greenrun.png') no-repeat;
+	background-size: 100% 100%;
+}
+.greenjia {
+	width: 13px !important;
+	background:url('../../../images/app/pubg/greenjia.png') no-repeat;
+	background-size: 100% 100%;
+}
+.greenbao {
+	background:url('../../../images/app/pubg/greenbao.png') no-repeat;
+	background-size: 100% 100%;
+}
+.greenrun {
+	background:url('../../../images/app/pubg/greenrun.png') no-repeat;
+	background-size: 100% 100%;
+}
+/* 橘色 */
+.orange1 {
+	background:url('../../../images/app/pubg/orange1.png') no-repeat;
+	background-size: 100% 100%;
+}
+.orangerun {
+	background:url('../../../images/app/pubg/orangerun.png') no-repeat;
+	background-size: 100% 100%;
+}
+.orangejia {
+	width: 13px !important;
+	background:url('../../../images/app/pubg/orangejia.png') no-repeat;
+	background-size: 100% 100%;
+}
+.orangebao {
+	background:url('../../../images/app/pubg/orangebao.png') no-repeat;
+	background-size: 100% 100%;
+}
+.orangecar {
+	background:url('../../../images/app/pubg/orangecar.png') no-repeat;
+	background-size: 100% 100%;
+}
+/* 紫色 */
+.purple1 {
+	background:url('../../../images/app/pubg/purple1.png') no-repeat;
+	background-size: 100% 100%;
+}
+.purplerun {
+	background:url('../../../images/app/pubg/purplerun.png') no-repeat;
+	background-size: 100% 100%;
+}
+.purplejia {
+	width: 13px !important;
+	background:url('../../../images/app/pubg/purplejia.png') no-repeat;
+	background-size: 100% 100%;
+}
+.purplebao {
+	background:url('../../../images/app/pubg/purplebao.png') no-repeat;
+	background-size: 100% 100%;
+}
+.purplecar {
+	background:url('../../../images/app/pubg/purplecar.png') no-repeat;
+	background-size: 100% 100%;
+}
+/* 小图标end */
+
+.play-data li {
+	position: relative;
+	float: left;
+	width: 33.33%;
+	height: 50px;
+	border-top: 1px solid #303046;
+	padding-left:7px;
+	padding-right:7px;
+	display:-webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+.play-data li:nth-child(3n) {
+	border-left: 1px solid #303046;
+	border-right: 1px solid #303046;
+}
+.play-data li em {
+	position: absolute;
+	top:5px;
+	right: 7px;
+	font-family: PingFangSC-Regular;
+	font-size: 10px;
+	color: #6A7088;
+}
+.play-data li span {
+	font-family: PingFangSC-Medium;
+	font-size: 16px;
+	color: #FFF;
+	letter-spacing: 0;
+}
+.play-data li i {
+	font-family: PingFangSC-Regular;
+	font-size: 10px;
+	color: #6A7088;;
+} 
+.allrank {
+	padding-left:0;
+	padding-right:0;
+}
+.allrank .pubg-title {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.allrank ul li {
+	display: -webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items:center;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.allrank ul li:nth-child(even) {
+	background: #252535;
+}
+.allrank ul li span {
+	display: block;
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #FFF;
+	text-align: center;
+	width: 10%;
+	overflow: hidden;
+}
+.allrank ul li:first-child {
+	height: 30px;
+}
+.allrank ul .me span {
+	color:#3A6CCE !important;
+}
+.allrank .me span i {
+	color:#3A6CCE !important;
+}
+.allrank ul li span:nth-child(5) {
+	width: 20%;
+}
+.allrank ul li span:nth-child(2) {
+	width: 40%;
+	text-align: left;
+}
+.allrank ul li:first-child span {
+	color: #6A7088;
+}
+.allrank ul li span:nth-child(2) i {
+	display: inline-block;
+    font-size: 13px;
+    color: #FFF;
+}
+/* 单排 */
+.allrank .allrank-list li {
+	height: 28px;
+}
+.allrank .allrank-list .last-more {
+	height: 40px;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	display:flex;
+	flex-direction: row;
+	justify-content:center;
+	align-items:center;
+}
+.allrank .allrank-list .last-more i {
+	display: inline-block;
+	width: 12px;
+	height: 10px;
+	vertical-align: middle;
+	background:url('../../../images/app/pubg/new.png') no-repeat;
+	background-size: 100% 100%;
+}
+.allrank .allrank-list .last-more em {
+	font-family: PingFangSC-Regular;
+	font-size:12px;
+	color: #3A6CCE;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+/* 双排 */
+.allrank .bigdouble li{
+	height: 50px;
+}
+/* 四排 */
+.allrank .bigfour li{
+	height: 80px;
+}
+
+/* 成就标签 */
+/* 击杀王 */
+.killk {
+	border: 1px solid #FF5757;
+	color: #FF5757;
+}
+/* 枪枪爆头 */
+.gunshot {
+	border: 1px solid #FF5A4A;
+	color: #FF5A4A;
+}
+/* 爆炸输出 */
+.bomb {
+	border: 1px solid #FF7342;
+	color: #FF7342;
+}
+/* 大杀特杀 */
+.slaughter {
+	border: 1px solid #FF9A41;
+	color: #FF9A41;
+}
+/* 落地成盒 */
+.landingbox {
+	border: 1px solid  #37CDFF;
+	color:  #37CDFF;
+}
+/* 队内最苟 */
+.liveon {
+	border: 1px solid #4EA7FF;
+	color: #4EA7FF;
+}
+/* 佛系吃鸡 */
+.nokill {
+	border: 1px solid #598DFF;
+	color: #598DFF;
+}
+/* 救死扶伤 */
+.helpall {
+	border: 1px solid #2FB554;
+	color: #2FB554;
+}
+/* 长跑健将 */
+.longrun {
+	border: 1px solid #9974FF;
+	color: #9974FF;
+}
+/* 车技稳健 */
+.driving {
+	border: 1px solid #AD51FF;
+	color: #AD51FF;
+}
+/* 底部分享 */
+.pb60 {
+	padding-bottom: 60px !important;
+}
+.download-bottom {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	height: 60px;
+	background: rgba(0,0,0,.8);
+	padding: 12px;
+}
+
+.download-bottom a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
+
+.download-bottom .fl {
+	width: 70%;
+}
+
+.download-bottom .fl img {
+	width: 40px;
+	height: 40px;
+	margin-right: 7px;
+}
+
+.download-bottom .fl p {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.download-bottom .fl span {
+	display: block;
+	font-size: 14px;
+}
+
+.download-bottom .fl i {
+	display: block;
+	margin-top: -1px;
+	font-size: 12px;
+}
+
+.download-bottom .fr {
+	width: 81px;
+	height: 33px;
+	border:1px solid #fff;
+	margin-top: 2px;
+	text-align: center;
+	line-height: 30px;
+}
